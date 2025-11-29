@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpectrumBild – The Little Rich Mous</title>
 
+    <!-- FAVICONS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
     <style>
         body {
             margin: 0;
@@ -13,22 +19,20 @@
             color: #111;
         }
 
-        /* HEADER / NAVBAR */
         .navbar {
-            background-color: #0a1a33; /* Navy Blue */
+            background-color: #0a1a33;
             padding: 18px 30px;
             text-align: center;
         }
 
         .navbar-title {
             font-family: Georgia, "Times New Roman", serif;
-            color: #d4af37;           /* Gold */
+            color: #d4af37;
             font-size: 36px;
             letter-spacing: 3px;
             font-weight: bold;
         }
 
-        /* STARTSEITE (CARD) */
         .page {
             max-width: 1100px;
             margin: 30px auto 60px;
@@ -59,36 +63,12 @@
             object-fit: cover;
         }
 
-        .art-card-info {
-            flex: 1;
-        }
-
-        .art-name {
-            font-size: 22px;
-            color: #0a1a33;          /* Navy Blue */
-            font-weight: bold;
-            margin-bottom: 6px;
-        }
-
-        .art-meta {
-            font-size: 15px;
-            color: #555;
-            margin-bottom: 12px;
-        }
-
-        .art-price {
-            font-size: 19px;
-            margin-bottom: 8px;
-        }
-
-        .art-price strong {
-            color: #b8860b;
-        }
-
-        .art-bid {
-            font-size: 16px;
-            margin-bottom: 14px;
-        }
+        .art-card-info { flex: 1; }
+        .art-name { font-size: 22px; color: #0a1a33; font-weight: bold; margin-bottom: 6px; }
+        .art-meta { font-size: 15px; color: #555; margin-bottom: 12px; }
+        .art-price { font-size: 19px; margin-bottom: 8px; }
+        .art-price strong { color: #b8860b; }
+        .art-bid { font-size: 16px; margin-bottom: 14px; }
 
         .primary-btn {
             display: inline-block;
@@ -101,14 +81,9 @@
             cursor: pointer;
         }
 
-        .primary-btn:hover {
-            opacity: 0.9;
-        }
+        .primary-btn:hover { opacity: 0.9; }
 
-        /* DETAILSEITE */
-        .detail-page {
-            display: none;
-        }
+        .detail-page { display: none; }
 
         .back-link {
             margin-bottom: 18px;
@@ -124,7 +99,6 @@
             flex-wrap: wrap;
         }
 
-        /* Bild-Slider */
         .image-wrapper {
             position: relative;
             width: 480px;
@@ -142,10 +116,7 @@
             transition: transform 0.25s ease;
         }
 
-        .detail-image.zoomed {
-            transform: scale(1.5);
-            cursor: zoom-out;
-        }
+        .detail-image.zoomed { transform: scale(1.5); cursor: zoom-out; }
 
         .arrow {
             position: absolute;
@@ -163,13 +134,8 @@
             justify-content: center;
         }
 
-        .arrow-left {
-            left: 12px;
-        }
-
-        .arrow-right {
-            right: 12px;
-        }
+        .arrow-left { left: 12px; }
+        .arrow-right { right: 12px; }
 
         .zoom-label {
             position: absolute;
@@ -182,42 +148,13 @@
             border-radius: 999px;
         }
 
-        /* Info-Block */
-        .detail-info {
-            flex: 1;
-            min-width: 260px;
-        }
+        .detail-info { flex: 1; min-width: 260px; }
+        .detail-title { font-size: 26px; color: #0a1a33; margin-bottom: 10px; }
+        .detail-section-title { font-size: 18px; margin-top: 18px; margin-bottom: 6px; font-weight: bold; }
+        .detail-text { font-size: 15px; line-height: 1.5; }
+        .detail-list { font-size: 15px; line-height: 1.5; margin-top: 4px; }
+        .highlight { color: #0a1a33; font-weight: bold; }
 
-        .detail-title {
-            font-size: 26px;
-            color: #0a1a33;
-            margin-bottom: 10px;
-        }
-
-        .detail-section-title {
-            font-size: 18px;
-            margin-top: 18px;
-            margin-bottom: 6px;
-            font-weight: bold;
-        }
-
-        .detail-text {
-            font-size: 15px;
-            line-height: 1.5;
-        }
-
-        .detail-list {
-            font-size: 15px;
-            line-height: 1.5;
-            margin-top: 4px;
-        }
-
-        .highlight {
-            color: #0a1a33;
-            font-weight: bold;
-        }
-
-        /* Auktion */
         .auction-box {
             margin-top: 20px;
             padding: 16px;
@@ -226,19 +163,9 @@
             background: #fafafa;
         }
 
-        .auction-row {
-            margin-bottom: 6px;
-            font-size: 15px;
-        }
-
-        .auction-row strong {
-            color: #0a1a33;
-        }
-
-        .countdown {
-            font-weight: bold;
-            color: #b22222;
-        }
+        .auction-row { margin-bottom: 6px; font-size: 15px; }
+        .auction-row strong { color: #0a1a33; }
+        .countdown { font-weight: bold; color: #b22222; }
 
         .auction-input {
             margin-top: 10px;
@@ -254,45 +181,24 @@
             min-width: 120px;
         }
 
-        .auction-note {
-            font-size: 13px;
-            color: #666;
-            margin-top: 10px;
-        }
+        .auction-note { font-size: 13px; color: #666; margin-top: 10px; }
+        .auction-message { font-size: 14px; margin-top: 8px; }
+        .success { color: #0a7a2f; }
+        .error { color: #b22222; }
 
-        .auction-message {
-            font-size: 14px;
-            margin-top: 8px;
-        }
-
-        .success {
-            color: #0a7a2f;
-        }
-
-        .error {
-            color: #b22222;
-        }
-
-        /* RESPONSIVE */
         @media (max-width: 800px) {
-            .art-card {
-                flex-direction: column;
-            }
-            .image-wrapper {
-                width: 100%;
-            }
+            .art-card { flex-direction: column; }
+            .image-wrapper { width: 100%; }
         }
     </style>
 
     <script>
-        // Dateinamen der Bilder
         const frontImage = "the-little-rich-mous.jpg";
         const backImage  = "the-little-rich-mous-back.jpg";
 
         let showingFront = true;
         let zoomed = false;
 
-        // Auktions-Variablen
         const START_PREIS = 500;
         let currentBid = START_PREIS;
         let firstBidTime = null;
@@ -306,21 +212,14 @@
             const storedBid = localStorage.getItem("sb_currentBid");
             const storedTime = localStorage.getItem("sb_firstBidTime");
 
-            if (storedBid) {
-                currentBid = parseFloat(storedBid);
-            }
-
-            if (storedTime) {
-                firstBidTime = parseInt(storedTime, 10);
-            }
+            if (storedBid) currentBid = parseFloat(storedBid);
+            if (storedTime) firstBidTime = parseInt(storedTime, 10);
 
             updateBidDisplay();
-            if (firstBidTime) {
-                startCountdown();
-            } else {
-                document.getElementById("countdownText").textContent =
-                    "Die Auktion startet, sobald das erste Gebot eingeht.";
-            }
+
+            if (firstBidTime) startCountdown();
+            else document.getElementById("countdownText").textContent = 
+                "Die Auktion startet, sobald das erste Gebot eingeht.";
         }
 
         function updateBidDisplay() {
@@ -365,9 +264,7 @@
         }
 
         function startCountdown() {
-            if (countdownInterval) {
-                clearInterval(countdownInterval);
-            }
+            if (countdownInterval) clearInterval(countdownInterval);
             const countdownEl = document.getElementById("countdownText");
             const FIVE_DAYS = 5 * 24 * 60 * 60 * 1000;
             const endTime = firstBidTime + FIVE_DAYS;
@@ -377,7 +274,8 @@
                 const diff = endTime - now;
 
                 if (diff <= 0) {
-                    countdownEl.textContent = "Auktion beendet – das Bild gehört dem Höchstbietenden.";
+                    countdownEl.textContent =
+                        "Auktion beendet – das Bild gehört dem Höchstbietenden.";
                     clearInterval(countdownInterval);
                     return;
                 }
@@ -398,7 +296,6 @@
             countdownInterval = setInterval(update, 1000);
         }
 
-        // Bildwechsel & Zoom
         function toggleImage(direction) {
             const img = document.getElementById("detailImage");
             zoomed = false;
@@ -414,14 +311,10 @@
         function toggleZoom() {
             const img = document.getElementById("detailImage");
             zoomed = !zoomed;
-            if (zoomed) {
-                img.classList.add("zoomed");
-            } else {
-                img.classList.remove("zoomed");
-            }
+            if (zoomed) img.classList.add("zoomed");
+            else img.classList.remove("zoomed");
         }
 
-        // Navigation zwischen Start- und Detailseite
         function openDetail() {
             document.getElementById("homePage").style.display = "block";
             document.getElementById("cardView").style.display = "none";
@@ -439,15 +332,13 @@
         window.addEventListener("DOMContentLoaded", initAuction);
     </script>
 </head>
-<body>
 
-    <!-- HEADER -->
+<body>
     <div class="navbar">
         <div class="navbar-title">SPECTRUMBILD</div>
     </div>
 
     <div class="page" id="homePage">
-        <!-- STARTSEITEN-KARTE -->
         <div id="cardView">
             <div class="art-card" onclick="openDetail()">
                 <img src="the-little-rich-mous.jpg" alt="The Little Rich Mous – Vorderseite">
@@ -460,34 +351,25 @@
                     <div class="art-bid" id="cardBidText">
                         Aktuelles Gebot: 500 CHF
                     </div>
-                    <button class="primary-btn" type="button">Details &amp; Bieten ansehen</button>
+                    <button class="primary-btn">Details &amp; Bieten ansehen</button>
                 </div>
             </div>
         </div>
 
-        <!-- DETAILSEITE -->
         <div id="detailPage" class="detail-page">
             <div class="back-link" onclick="backToHome()">← Zurück zur Übersicht</div>
 
             <div class="detail-layout">
-                <!-- Bildbereich mit Pfeilen & Zoom -->
                 <div class="image-wrapper" onclick="toggleZoom()">
                     <img id="detailImage"
                          src="the-little-rich-mous.jpg"
                          alt="The Little Rich Mous – Vorderseite"
                          class="detail-image">
-                    <button class="arrow arrow-left" type="button"
-                            onclick="event.stopPropagation(); toggleImage('left');">
-                        ‹
-                    </button>
-                    <button class="arrow arrow-right" type="button"
-                            onclick="event.stopPropagation(); toggleImage('right');">
-                        ›
-                    </button>
+                    <button class="arrow arrow-left" onclick="event.stopPropagation(); toggleImage('left');">‹</button>
+                    <button class="arrow arrow-right" onclick="event.stopPropagation(); toggleImage('right');">›</button>
                     <div class="zoom-label">Zum Vergrössern anklicken</div>
                 </div>
 
-                <!-- Text- / Auktionsbereich -->
                 <div class="detail-info">
                     <div class="detail-title">The Little Rich Mous</div>
 
@@ -496,8 +378,7 @@
                         „The Little Rich Mous“ ist ein modernes Acrylkunstwerk auf hochwertiger Leinwand.
                         Die graue Maus verbindet Luxus-Symbolik mit einer spielerischen, fast frechen Haltung.
                         Der goldene Schriftzug vor dem kräftig pinken Hintergrund verleiht dem Werk
-                        einen eleganten und gleichzeitig provokanten Charakter – ein Statement-Piece,
-                        das sofort ins Auge fällt.
+                        einen eleganten und gleichzeitig provokanten Charakter – ein Statement-Piece.
                     </p>
 
                     <div class="detail-section-title">Details zum Werk</div>
@@ -506,35 +387,23 @@
                         <li><span class="highlight">Masse:</span> 69,5 × 49 × 1,5 cm</li>
                         <li><span class="highlight">Unikat:</span> Originalgemälde, Einzelstück</li>
                         <li><span class="highlight">Versand:</span> Versandkosten gratis</li>
-                        <li><span class="highlight">Abholung:</span> Persönliche Abholung auf Wunsch möglich</li>
+                        <li><span class="highlight">Abholung:</span> Persönliche Abholung möglich</li>
                     </ul>
 
                     <div class="detail-section-title">Auktion</div>
                     <div class="auction-box">
-                        <div class="auction-row">
-                            <strong>Startpreis:</strong> 500 CHF
-                        </div>
-                        <div class="auction-row">
-                            <strong>Aktuelles Gebot:</strong>
-                            <span id="currentBid">500 CHF</span>
-                        </div>
-                        <div class="auction-row countdown" id="countdownText">
-                            <!-- wird per JS gefüllt -->
-                        </div>
+                        <div class="auction-row"><strong>Startpreis:</strong> 500 CHF</div>
+                        <div class="auction-row"><strong>Aktuelles Gebot:</strong> <span id="currentBid">500 CHF</span></div>
+                        <div class="auction-row countdown" id="countdownText"></div>
 
                         <div class="auction-input">
-                            <input id="bidInput" type="number" step="10" min="500"
-                                   placeholder="Dein Gebot in CHF">
-                            <button class="primary-btn" type="button" onclick="placeBid()">
-                                Gebot abgeben
-                            </button>
+                            <input id="bidInput" type="number" step="10" min="500" placeholder="Dein Gebot in CHF">
+                            <button class="primary-btn" onclick="placeBid()">Gebot abgeben</button>
                         </div>
 
                         <div class="auction-note">
                             Wenn während <strong>5 Tagen</strong> kein höheres Gebot eingeht,
                             gehört das Bild automatisch der Person mit dem höchsten Gebot.
-                            (Hinweis: Gebote werden nur lokal auf diesem Gerät gespeichert –
-                            für die echte Auktion kontaktiere bitte Sophia direkt.)
                         </div>
 
                         <div id="auctionMessage" class="auction-message"></div>
@@ -542,19 +411,15 @@
 
                     <div class="detail-section-title">Kontakt & Kaufabwicklung</div>
                     <p class="detail-text">
-                        Wenn du die Auktion gewonnen hast oder Fragen zum Bild hast,
-                        kontaktiere mich gerne unter:
+                        Bei Fragen oder zur Kaufabwicklung:
                         <br><br>
-                        📧 <a href="mailto:sophia.zuechner@gmail.com">
-                            sophia.zuechner@gmail.com
-                        </a>
+                        📧 <a href="mailto:sophia.zuechner@gmail.com">sophia.zuechner@gmail.com</a>
                         <br><br>
-                        Gemeinsam klären wir Zahlung, Versand oder persönliche Abholung.
+                        Wir klären gemeinsam Zahlung, Versand oder Abholung.
                     </p>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 </html>

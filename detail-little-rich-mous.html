@@ -3,43 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Little Rich Mous – Details & Gebot</title>
+    <title>The Little Rich Mous – Details</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <div class="logo">SPECTRUM BILD</div>
+    <div class="logo">Spectrum Bild</div>
     <nav>
         <a href="index.html">Home</a>
-        <a href="galerie.html">Galerie</a>
+        <a href="galerie.html" class="active">Galerie</a>
     </nav>
 </header>
 
 <div class="detail-container">
+    <img src="the-little-rich-mous.jpg" class="detail-img" alt="The Little Rich Mous">
 
-    <img src="the-little-rich-mous.jpg" class="detail-img">
-
-    <h1>The Little Rich Mous</h1>
-
-    <p>Acryl auf Leinwand · 69,5 × 49 × 1,5 cm</p>
-    <p><strong class="gold">Startpreis:</strong> 1500 CHF</p>
+    <h2>The Little Rich Mous</h2>
+    <p>Acryl auf Leinwand – 69,5 × 49 × 1,5 cm</p>
+    <p><strong>Startpreis:</strong> 1500 CHF</p>
     <p><strong>Aktuelles Gebot:</strong> 1500 CHF</p>
 
-    <h3>Gebot abgeben</h3>
+    <h3>Neues Gebot abgeben</h3>
+    <p class="warnung">⚠️ Nach Abgabe kann ein Gebot nicht mehr zurückgesetzt werden.</p>
 
-    <form>
-        <label>Neues Gebot eingeben (in CHF):</label><br>
-        <input type="number" min="1500" placeholder="Mindestens 1500 CHF"><br>
+    <input type="number" id="gebot" placeholder="Neues Gebot in CHF eingeben">
 
-        <p class="warnung">
-            ⚠️ WICHTIG: Ein einmal abgegebenes Gebot kann NICHT zurückgezogen werden.
-        </p>
+    <a class="btn" href="mailto:spectrum.art.mail@gmail.com?subject=Gebot%20Little%20Rich%20Mous&body=Mein%20Gebot:%20">
+        Gebot jetzt senden
+    </a>
 
-        <button class="btn">Gebot bestätigen</button>
-    </form>
-
+    <br><br>
+    <a class="btn" href="galerie.html" style="background:#333;">Zurück zur Galerie</a>
 </div>
 
 </body>

@@ -5,746 +5,285 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spectrum Bild – Luxury Branding & Art</title>
 
-    <!-- SEO -->
     <meta name="description" content="Spectrum Bild – Luxuriöse Logos, exklusive Art-Pieces und Premium-Branding in Gold & Schwarz.">
-    <meta name="keywords" content="Spectrum Bild, Logo Design, Luxus, Gold Logo, Branding, Kunst, The Little Rich Mous">
-    <meta name="author" content="Spectrum Bild">
-
-    <!-- Open Graph (Google, Social Media) -->
     <meta property="og:title" content="Spectrum Bild – Luxury Branding & Art">
-    <meta property="og:description" content="Luxuriöse Logos, exklusive Art-Pieces und Premium-Branding in Gold & Schwarz.">
-    <!-- du kannst hier auch the-little-rich-mous.jpg eintragen, wenn du das Bild als Vorschau willst -->
     <meta property="og:image" content="https://spectrum-dotcom.github.io/spectrum-bild/favicon.png">
     <meta property="og:url" content="https://spectrum-dotcom.github.io/spectrum-bild/">
     <meta property="og:type" content="website">
-
-    <!-- Favicons -->
-    <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png">
-    <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-    <!-- Google Verification (lass so drin) -->
     <meta name="google-site-verification" content="ea78affee2b8f1d7" />
 
-    <!-- Fonts -->
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" sizes="16x16" href="favicon-16x16.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
     <style>
-        :root {
-            --bg-dark: #050509;
-            --bg-darker: #020206;
-            --gold: #d4b66a;
-            --gold-soft: #c9a862;
-            --gold-muted: #8d7b52;
-            --text-light: #f4e7c5;
-        }
+    :root {
+        --bg-dark: #050509;
+        --gold: #d4b66a;
+        --gold-muted: #9f8a5a;
+        --gold-soft: #c9a862;
+        --text-light: #f4e7c5;
+    }
 
-        * {
-            box-sizing: border-box;
-        }
+    body {
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+        background: radial-gradient(circle at top, #151524, #020206 55%);
+        color: var(--text-light);
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    a { color: inherit; text-decoration: none; }
 
-        body {
-            margin: 0;
-            background: radial-gradient(circle at top, #151524, #020206 55%);
-            color: var(--text-light);
-            font-family: 'Montserrat', sans-serif;
-        }
+    /* NAVBAR */
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 8vw;
+        background: rgba(2,2,6,0.9);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(212,182,106,0.25);
+    }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+    .nav-brand {
+        display: flex; gap: 10px; align-items: center;
+        font-family: 'Playfair Display', serif;
+        color: var(--gold);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .nav-brand img {
+        width: 32px; height: 32px; border-radius: 50%; border:1px solid var(--gold-soft);
+    }
 
-        /* NAVBAR */
-        .navbar {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 14px 8vw;
-            background: rgba(2, 2, 6, 0.94);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(212,182,106,0.25);
-        }
+    .nav-links { display: flex; gap: 22px; font-size: 14px; }
+    .nav-links a { position: relative; }
+    .nav-links a::after {
+        content:""; position:absolute; left:0; bottom:-3px; width:0; height:1px;
+        background:var(--gold); transition:0.3s;
+    }
+    .nav-links a:hover::after { width:100%; }
 
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--gold);
-        }
+    /* HERO */
+    .hero {
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 70px 8vw;
+    }
 
-        .nav-logo-small {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            border: 1px solid var(--gold-soft);
-            object-fit: cover;
-        }
+    .hero-inner {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 70px;
+        max-width: 1200px; align-items: center;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 24px;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+    .hero-title { font-family: 'Playfair Display'; font-size: 46px; color: var(--gold); margin-bottom: 12px; }
+    .hero-sub { color: var(--gold-muted); font-size: 17px; margin-bottom: 22px; }
 
-        .nav-links a {
-            position: relative;
-            padding-bottom: 3px;
-        }
+    .btn-primary {
+        background: var(--gold);
+        padding: 11px 22px;
+        border-radius: 22px;
+        border: none;
+        color: #000;
+        font-weight: 600;
+        cursor: pointer;
+    }
 
-        .nav-links a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0;
-            height: 1px;
-            background: var(--gold);
-            transition: width 0.25s ease;
-        }
+    .hero-logo { max-width: 300px; border-radius: 16px; }
 
-        .nav-links a:hover::after {
-            width: 100%;
-        }
+    /* Section frame */
+    section { padding: 70px 8vw; }
 
-        /* HERO */
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 80px 8vw 60px;
-        }
+    .section-title {
+        font-family: 'Playfair Display';
+        color: var(--gold);
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+    .section-sub {
+        text-align:center; color:var(--gold-muted); margin-bottom:40px;
+    }
 
-        .hero-inner {
-            max-width: 1100px;
-            display: grid;
-            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-            gap: 50px;
-            align-items: center;
-        }
+    /* GALLERY GRID */
+    .gallery-grid {
+        display:grid; grid-template-columns: repeat(3,1fr); gap:22px;
+        max-width:1100px; margin:auto;
+    }
 
-        .hero-logo-wrap {
-            text-align: center;
-            animation: fadeIn 1.6s ease-out;
-        }
+    .card {
+        background: radial-gradient(circle at top left,#181521,#040408);
+        padding:16px; border-radius:16px;
+        border:1px solid rgba(212,182,106,0.25);
+        cursor:pointer;
+        transition:0.3s;
+    }
+    .card:hover { transform:translateY(-4px); }
 
-        .hero-logo {
-            width: 260px;
-            max-width: 70%;
-            filter: drop-shadow(0 0 30px rgba(0,0,0,0.8));
-        }
+    .card img { width:100%; border-radius:12px; margin-bottom:12px; }
 
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 4px 12px;
-            border-radius: 999px;
-            border: 1px solid rgba(212,182,106,0.4);
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 1.4px;
-            color: var(--gold-muted);
-            margin-bottom: 14px;
-        }
-
-        .dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--gold);
-        }
-
-        .hero-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 44px;
-            line-height: 1.1;
-            color: var(--gold);
-            margin: 0 0 14px;
-            animation: fadeInUp 1.2s ease-out;
-        }
-
-        .hero-sub {
-            font-size: 17px;
-            color: var(--gold-soft);
-            margin-bottom: 24px;
-            animation: fadeInUp 1.4s ease-out;
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            animation: fadeInUp 1.6s ease-out;
-        }
-
-        .btn-primary {
-            background: var(--gold);
-            color: #000;
-            padding: 11px 26px;
-            border-radius: 999px;
-            font-weight: 600;
-            font-size: 14px;
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1.4px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-        }
-
-        .btn-primary:hover {
-            background: #f0d48a;
-            box-shadow: 0 0 24px rgba(212,182,106,0.35);
-            transform: translateY(-1px);
-        }
-
-        .btn-ghost {
-            background: transparent;
-            border-radius: 999px;
-            border: 1px solid rgba(212,182,106,0.5);
-            color: var(--gold-soft);
-            padding: 10px 22px;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1.4px;
-            cursor: pointer;
-            transition: background 0.2s ease, color 0.2s ease;
-        }
-
-        .btn-ghost:hover {
-            background: rgba(212,182,106,0.12);
-            color: var(--gold);
-        }
-
-        .hero-note {
-            margin-top: 18px;
-            font-size: 13px;
-            color: var(--gold-muted);
-        }
-
-        /* SECTION FRAME */
-        section {
-            padding: 70px 8vw;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 30px;
-            color: var(--gold);
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .section-sub {
-            font-size: 15px;
-            color: var(--gold-muted);
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        /* ÜBER */
-        .about-grid {
-            max-width: 960px;
-            margin: 0 auto;
-            display: grid;
-            gap: 26px;
-        }
-
-        .about-highlight {
-            padding: 20px 22px;
-            border-radius: 14px;
-            background: radial-gradient(circle at top, #181521, #050509);
-            border: 1px solid rgba(212,182,106,0.28);
-            text-align: left;
-        }
-
-        .about-highlight h3 {
-            margin-top: 0;
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
-            color: var(--gold);
-        }
-
-        .about-highlight p {
-            margin: 8px 0;
-            font-size: 14px;
-            color: var(--gold-soft);
-            line-height: 1.6;
-        }
-
-        /* SIGNATURE PIECE */
-        .signature {
-            max-width: 1120px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-            gap: 38px;
-            align-items: center;
-        }
-
-        .signature-img-wrap {
-            position: relative;
-        }
-
-        .signature-main {
-            width: 100%;
-            border-radius: 18px;
-            overflow: hidden;
-            border: 1px solid rgba(212,182,106,0.35);
-            box-shadow: 0 18px 40px rgba(0,0,0,0.75);
-        }
-
-        .signature-main img {
-            width: 100%;
-            display: block;
-        }
-
-        .signature-tag {
-            position: absolute;
-            left: 16px;
-            top: 16px;
-            background: rgba(5,5,9,0.82);
-            color: var(--gold-soft);
-            padding: 6px 12px;
-            border-radius: 999px;
-            font-size: 11px;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            border: 1px solid rgba(212,182,106,0.4);
-        }
-
-        .signature-thumbs {
-            display: flex;
-            gap: 12px;
-            margin-top: 12px;
-        }
-
-        .signature-thumbs img {
-            width: 82px;
-            height: 82px;
-            border-radius: 10px;
-            object-fit: cover;
-            border: 1px solid rgba(212,182,106,0.35);
-            opacity: 0.95;
-        }
-
-        .signature-text h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            margin-top: 0;
-            color: var(--gold);
-        }
-
-        .signature-text p {
-            font-size: 14px;
-            color: var(--gold-soft);
-            line-height: 1.7;
-        }
-
-        .signature-details {
-            margin-top: 14px;
-            font-size: 13px;
-            color: var(--gold-muted);
-        }
-
-        .signature-details span {
-            display: inline-block;
-            margin-right: 16px;
-        }
-
-        /* GALERIE */
-        .gallery-grid {
-            max-width: 1120px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 22px;
-        }
-
-        .card {
-            background: radial-gradient(circle at top left, #181521, #040408);
-            border-radius: 16px;
-            padding: 14px 14px 18px;
-            border: 1px solid rgba(212,182,106,0.25);
-            box-shadow: 0 10px 26px rgba(0,0,0,0.55);
-            text-align: left;
-        }
-
-        .card img {
-            width: 100%;
-            border-radius: 12px;
-            display: block;
-            margin-bottom: 12px;
-        }
-
-        .card-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 18px;
-            color: var(--gold);
-            margin-bottom: 4px;
-        }
-
-        .card-meta {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1.4px;
-            color: var(--gold-muted);
-            margin-bottom: 6px;
-        }
-
-        .card-text {
-            font-size: 13px;
-            color: var(--gold-soft);
-        }
-
-        /* PROCESS */
-        .process-grid {
-            max-width: 900px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 20px;
-        }
-
-        .step {
-            padding: 16px 16px 18px;
-            border-radius: 14px;
-            border: 1px solid rgba(212,182,106,0.28);
-            background: radial-gradient(circle at top, #181521, #050509);
-            text-align: left;
-        }
-
-        .step-number {
-            font-size: 13px;
-            color: var(--gold-muted);
-            text-transform: uppercase;
-            letter-spacing: 1.6px;
-            margin-bottom: 4px;
-        }
-
-        .step-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 18px;
-            color: var(--gold);
-            margin-bottom: 6px;
-        }
-
-        .step-text {
-            font-size: 13px;
-            color: var(--gold-soft);
-            line-height: 1.6;
-        }
-
-        /* KONTAKT */
-        .contact-box {
-            max-width: 560px;
-            margin: 0 auto;
-            padding: 24px 22px 26px;
-            border-radius: 18px;
-            background: radial-gradient(circle at top, #181521, #050509);
-            border: 1px solid rgba(212,182,106,0.35);
-            text-align: center;
-        }
-
-        .contact-box p {
-            font-size: 14px;
-            color: var(--gold-soft);
-            line-height: 1.7;
-            margin-bottom: 16px;
-        }
-
-        .contact-mail {
-            display: inline-block;
-            margin-top: 4px;
-            font-weight: 600;
-            color: var(--gold);
-        }
-
-        footer {
-            padding: 26px 8vw 30px;
-            border-top: 1px solid rgba(212,182,106,0.22);
-            background: var(--bg-darker);
-            font-size: 12px;
-            color: var(--gold-muted);
-            text-align: center;
-        }
-
-        /* RESPONSIVE */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.96); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(18px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 900px) {
-            .hero-inner,
-            .signature {
-                grid-template-columns: 1fr;
-            }
-            .hero {
-                padding-top: 70px;
-            }
-            .hero-title {
-                font-size: 34px;
-            }
-            .gallery-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-            .process-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .navbar {
-                padding-inline: 5vw;
-            }
-            .nav-links {
-                display: none; /* für ganz simpel, später kann man Burger-Menü machen */
-            }
-            .hero-inner {
-                gap: 32px;
-            }
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-            section {
-                padding-inline: 6vw;
-            }
-        }
+    .card-title {
+        color:var(--gold);
+        font-family:'Playfair Display';
+        font-size:20px;
+        margin-bottom:6px;
+    }
+    .card-meta { font-size:12px; color:var(--gold-muted); margin-bottom:4px; }
+    .card-text { font-size:14px; color:var(--gold-soft); }
     </style>
 </head>
+
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="nav-brand">
-            <img src="favicon.png" alt="Spectrum Bild Logo" class="nav-logo-small">
-            <span>Spectrum Bild</span>
-        </div>
-        <div class="nav-links">
-            <a href="#about">Über</a>
-            <a href="#work">Signature Piece</a>
-            <a href="#gallery">Galerie</a>
-            <a href="#process">Ablauf</a>
-            <a href="#contact">Kontakt</a>
-        </div>
-    </nav>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-brand">
+        <img src="favicon.png">
+        <span>Spectrum Bild</span>
+    </div>
+    <div class="nav-links">
+        <a href="#about">Über</a>
+        <a href="#work">Signature</a>
+        <a href="#gallery">Galerie</a>
+        <a href="#contact">Kontakt</a>
+    </div>
+</nav>
 
-    <!-- HERO -->
-    <section class="hero" id="top">
-        <div class="hero-inner">
-            <div>
-                <div class="hero-badge">
-                    <span class="dot"></span>
-                    Luxury Branding & Art
-                </div>
-                <h1 class="hero-title">Goldene Logos & Art-Pieces für mutige Marken.</h1>
-                <p class="hero-sub">
-                    Spectrum Bild verbindet royale Symbolik, edle Typografie und luxuriöse Farbwelten.
-                    Jede Arbeit ist ein Unikat – gemacht, um aufzufallen.
-                </p>
-                <div class="hero-actions">
-                    <a href="#work" class="btn-primary">Signature Piece ansehen</a>
-                    <a href="#contact" class="btn-ghost">Anfrage senden</a>
-                </div>
-                <div class="hero-note">
-                    Handgemachte Art-Pieces & digitale Logos – designed mit ❤️ in der Schweiz.
-                </div>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-inner">
+        <div>
+            <h1 class="hero-title">Goldene Logos & Art – Modern & Royal.</h1>
+            <p class="hero-sub">Einzigartige Art-Pieces und digitale Embleme im luxuriösen Schwarz-Gold Stil.</p>
+            <a href="#gallery"><button class="btn-primary">Galerie ansehen</button></a>
+        </div>
+        <div><img class="hero-logo" src="favicon.png"></div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="section-title">Über Spectrum Bild</h2>
+    <p class="section-sub">Luxus trifft Kunst – ein moderner royaler Stil.</p>
+</section>
+
+<!-- SIGNATURE PIECE -->
+<section id="work">
+    <h2 class="section-title">Signature Piece</h2>
+    <p class="section-sub">Das erste Kunstwerk im typischen SB-Style.</p>
+
+    <img src="the-little-rich-mous.jpg" style="width:100%; max-width:600px; display:block; margin:auto; border-radius:18px; border:1px solid var(--gold-soft);">
+</section>
+
+<!-- GALERIE -->
+<section id="gallery">
+    <h2 class="section-title">Galerie & Logos</h2>
+    <p class="section-sub">Klicke auf ein Bild, um Details zu sehen.</p>
+
+    <div class="gallery-grid">
+
+        <!-- ⭐ DEINE BILDCARD -->
+        <div class="card" onclick="openDetailPage()">
+            <img src="the-little-rich-mous.jpg" alt="The Little Rich Mous">
+            <div class="card-title">The Little Rich Mous</div>
+            <div class="card-meta">Original · Acryl auf Leinwand</div>
+            <div class="card-text">
+                Preis: <span style="color:var(--gold); font-weight:600;">1'500 CHF</span><br>
+                <span style="color:var(--gold-muted); font-size:12px;">Für Details klicken</span>
             </div>
-
-            <div class="hero-logo-wrap">
-                <img src="favicon.png" alt="Spectrum Bild Emblem" class="hero-logo">
-            </div>
         </div>
-    </section>
 
-    <!-- ÜBER -->
-    <section id="about">
-        <h2 class="section-title">Über Spectrum Bild</h2>
-        <p class="section-sub">
-            Eine Mischung aus königlichem Wappen, Street-Attitude und modernem Luxus.
+        <!-- Andere Galerie-Elemente -->
+        <div class="card">
+            <img src="favicon.png">
+            <div class="card-title">SB Emblem</div>
+            <div class="card-meta">Logo Design</div>
+            <div class="card-text">Luxuriöses Emblem im Gold-Stil.</div>
+        </div>
+
+        <div class="card">
+            <img src="the-little-rich-mous-back.jpg">
+            <div class="card-title">Backside</div>
+            <div class="card-meta">Art</div>
+            <div class="card-text">Weitere Werke folgen.</div>
+        </div>
+
+    </div>
+</section>
+
+<!-- DETAILSEITE OVERLAY -->
+<div id="detailOverlay" style="
+    display:none; position:fixed; top:0; left:0;
+    width:100%; height:100%; background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(6px); z-index:9999; overflow-y:auto; padding:50px 20px;
+">
+    <div style="
+        max-width:850px; margin:auto; background:#0a0a0f;
+        border:1px solid rgba(212,182,106,0.4); border-radius:18px;
+        padding:30px; box-shadow:0 0 40px rgba(0,0,0,0.6);
+    ">
+        <button onclick="closeDetailPage()" style="
+            float:right; background:none; color:var(--gold); border:none;
+            font-size:22px; cursor:pointer;
+        ">✕</button>
+
+        <h2 style="font-family:'Playfair Display'; color:var(--gold); font-size:32px; margin-top:0;">
+            The Little Rich Mous
+        </h2>
+
+        <img src="the-little-rich-mous.jpg" style="
+            width:100%; border-radius:14px; margin-bottom:18px;
+            border:1px solid rgba(212,182,106,0.3);
+        ">
+
+        <p style="color:var(--gold-muted); line-height:1.6;">
+            „The Little Rich Mous“ ist ein luxuriöses Acrylkunstwerk auf Leinwand.
+            Es kombiniert Pop-Ästhetik, Goldfarben und freche Eleganz.
         </p>
 
-        <div class="about-grid">
-            <div class="about-highlight">
-                <h3>Luxus, aber mit einem Augenzwinkern.</h3>
-                <p>
-                    Spectrum Bild spielt bewusst mit Symbolen von Reichtum: Kronen, Löwen, Initialen – 
-                    kombiniert mit frechen Motiven wie einer kleinen, reichen Maus.
-                </p>
-            </div>
-            <div class="about-highlight">
-                <h3>Gold & Schwarz als Signature Look.</h3>
-                <p>
-                    Die Farbwelt ist klar: tiefes Schwarz, warmes Gold, minimale Kontraste. 
-                    Dadurch wirken Logos und Art-Pieces zeitlos, stark und hochwertig – egal ob digital oder auf Leinwand.
-                </p>
-            </div>
-            <div class="about-highlight">
-                <h3>Von der Idee zum Logo.</h3>
-                <p>
-                    Jede Arbeit startet mit einer Story: Wer bist du? Wie soll sich deine Marke anfühlen?
-                    Daraus entsteht ein visuelles Emblem, das sich wie ein echtes Familienwappen anfühlt – nur moderner.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SIGNATURE PIECE -->
-    <section id="work">
-        <h2 class="section-title">Signature Piece: „The Little Rich Mous“</h2>
-        <p class="section-sub">
-            Ein Art-Piece, das Luxus mit Humor verbindet – und die Basis für den Spectrum-Bild-Vibe gesetzt hat.
+        <p style="color:var(--gold); font-size:20px; font-weight:600;">
+            Preis: 1'500 CHF
         </p>
 
-        <div class="signature">
-            <div class="signature-img-wrap">
-                <div class="signature-main">
-                    <img src="the-little-rich-mous.jpg" alt="The Little Rich Mous – Vorderseite">
-                </div>
-                <div class="signature-tag">
-                    Original Acryl auf Leinwand · 69,5 × 49 × 1,5 cm
-                </div>
-                <div class="signature-thumbs">
-                    <img src="the-little-rich-mous.jpg" alt="The Little Rich Mous Front">
-                    <img src="the-little-rich-mous-back.jpg" alt="The Little Rich Mous Rückseite">
-                </div>
-            </div>
+        <h3 style="color:var(--gold); margin-top:25px;">Auktion</h3>
 
-            <div class="signature-text">
-                <h3>Eine kleine Maus, grosse Attitude.</h3>
-                <p>
-                    „The Little Rich Mous“ ist mehr als nur ein Bild – es ist ein Statement. 
-                    Die Maus posiert vor kräftigem Pink, trägt einen goldenen Schriftzug und wirkt gleichzeitig süss, frech und übertrieben luxuriös.
-                </p>
-                <p>
-                    Die Kombination aus Pop-Colour, Gold und klarer Typografie ist typisch für Spectrum Bild
-                    und zieht sich auch in spätere Logos und Embleme hinein.
-                </p>
-                <div class="signature-details">
-                    <span>Technik: Acryl auf Leinwand</span>
-                    <span>Unikat: Einzelstück</span>
-                    <span>Versand: Auf Anfrage</span>
-                </div>
-            </div>
+        <div style="
+            border:1px solid rgba(212,182,106,0.3);
+            padding:16px;
+            border-radius:12px;
+            margin-bottom:25px;
+            background:#0f0f17;
+        ">
+            <p>Aktuelles Gebot: <span id="currentBid" style="color:var(--gold); font-weight:600;">1500 CHF</span></p>
+
+            <input id="bidInput" type="number" min="1500"
+                placeholder="Dein Gebot in CHF"
+                style="padding:8px 12px; width:160px; border-radius:8px; border:1px solid #555;">
+
+            <button onclick="placeBid()" style="
+                padding:8px 18px; margin-left:10px;
+                background:var(--gold); border:none;
+                border-radius:8px; color:#000; font-weight:600; cursor:pointer;">
+                Bieten
+            </button>
+
+            <p id="bidMessage" style="margin-top:12px; color:var(--gold-muted);"></p>
         </div>
-    </section>
 
-    <!-- GALERIE -->
-    <section id="gallery">
-        <h2 class="section-title">Galerie & Logos</h2>
-        <p class="section-sub">
-            Ein kleiner Einblick – weitere Arbeiten, Varianten und digitale Logos sind in Arbeit.
-        </p>
+        <img src="the-little-rich-mous-back.jpg" style="
+            width:100%; border-radius:14px;
+            border:1px solid rgba(212,182,106,0.3);
+        ">
 
-        <div class="gallery-grid">
-            <div class="card">
-                <img src="the-little-rich-mous.jpg" alt="The Little Rich Mous">
-                <div class="card-title">The Little Rich Mous</div>
-                <div class="card-meta">Art Piece · Original</div>
-                <div class="card-text">
-                    Statement-Piece in Pink & Gold – perfekt als Centerpiece über Sofa, Sideboard oder im Entrance.
-                </div>
-            </div>
-            <div class="card">
-                <img src="favicon.png" alt="Spectrum Bild Emblem">
-                <div class="card-title">SB Royal Emblem</div>
-                <div class="card-meta">Logo · Digital</div>
-                <div class="card-text">
-                    Doppelter Löwe, Krone & Initialen: ein digitales Emblem, das wie gesticktes Gold auf tiefschwarzem Stoff wirkt.
-                </div>
-            </div>
-            <div class="card">
-                <img src="the-little-rich-mous-back.jpg" alt="Backside Art">
-                <div class="card-title">Work in Progress</div>
-                <div class="card-meta">More soon</div>
-                <div class="card-text">
-                    Weitere Logos, Capsule Collections und digitale Art-Stücke sind in Planung.
-                    Spectrum Bild wächst – stay tuned.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABLAUF -->
-    <section id="process">
-        <h2 class="section-title">So entsteht dein Logo oder Art-Piece</h2>
-        <p class="section-sub">
-            Klarer Prozess, viel Gefühl – damit das Ergebnis wirklich zu dir passt.
-        </p>
-
-        <div class="process-grid">
-            <div class="step">
-                <div class="step-number">Schritt 1</div>
-                <div class="step-title">Vibe & Vision</div>
-                <div class="step-text">
-                    Du erzählst, wer du bist, was du liebst und wie sich deine Marke anfühlen soll.
-                    Kein komplizierter Fragebogen – einfach ein ehrliches Gespräch.
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-number">Schritt 2</div>
-                <div class="step-title">Design & Skizzen</div>
-                <div class="step-text">
-                    Auf Basis deiner Story entstehen erste Ideen, Symbole und Layouts. 
-                    Gold, Typografie und Formen werden so kombiniert, dass dein ganz eigenes Emblem entsteht.
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-number">Schritt 3</div>
-                <div class="step-title">Final & Übergabe</div>
-                <div class="step-text">
-                    Du erhältst dein finales Logo oder Art-Piece – bereit für Social Media, Druck oder als physische Leinwand.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- KONTAKT -->
-    <section id="contact">
-        <h2 class="section-title">Kontakt & Anfragen</h2>
-        <p class="section-sub">
-            Du möchtest ein Logo, ein Emblem oder ein eigenes Art-Piece im Spectrum-Bild-Style?
-        </p>
-
-        <div class="contact-box">
-            <p>
-                Schreib einfach eine Mail mit ein paar Infos zu dir und deiner Idee. 
-                Du musst noch nichts Perfektes formulieren – wir finden den Rest gemeinsam heraus.
-            </p>
-            <p>
-                📧 <a class="contact-mail" href="mailto:sophia.zuechner@gmail.com">sophia.zuechner@gmail.com</a>
-            </p>
-            <p style="font-size: 12px; color: var(--gold-muted); margin-top: 10px;">
-                Auf Wunsch sind auch Auftragsarbeiten, limitierte Editions und personalisierte Embleme möglich.
-            </p>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        © 2025 Spectrum Bild · Luxury Branding & Art · Alle Rechte vorbehalten.
-    </footer>
-
-</body>
-</html>
+        <br><br>
+        <button onclick="closeDetailPage()" style="
+            width:100%; padding:12px;
+            border:none; border-radius:10px;
+            background:rgba(212,182,106,0.

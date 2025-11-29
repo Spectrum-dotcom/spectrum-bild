@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://spectrum-dotcom.github.io/spectrum-bild/sitemap.xml

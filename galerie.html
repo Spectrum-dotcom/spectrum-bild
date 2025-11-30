@@ -1,48 +1,132 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie – Spectrum Bild</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        body.gallery-body {
+            background: #0b0f1a; /* elegantes Navy */
+            margin: 0;
+            font-family: 'Times New Roman', serif;
+            color: #e3c67b;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px;
+            background: #0b0f1a;
+        }
+
+        .nav a {
+            color: #e3c67b;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        .logo {
+            height: 65px;
+        }
+
+        /* Galerie Cards */
+        .gallery-container {
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 20px;
+        }
+
+        .art-card {
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            padding: 25px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+        }
+
+        .art-card img {
+            width: 330px;
+            height: auto;
+            border-radius: 15px;
+            transform: rotate(-90deg); /* Bild drehen */
+        }
+
+        .art-info {
+            padding-left: 25px;
+        }
+
+        .art-info h2 {
+            color: #0b0f1a;
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .art-info p {
+            color: #333;
+            font-size: 18px;
+            margin: 6px 0;
+        }
+
+        .btn-more {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #0b0f1a;
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .btn-more:hover {
+            background: #111827;
+        }
+    </style>
 </head>
 
-<body class="dark-bg">
+<body class="gallery-body">
 
-<header class="nav">
-    <img src="logo.png" class="logo">
+    <header class="nav">
+        <img src="logo.png" class="logo">
 
-    <nav>
-        <a href="index.html#about">ÜBER</a>
-        <a href="index.html#signature">SIGNATURE PIECE</a>
-        <a href="galerie.html" class="active">GALERIE</a>
-        <a href="index.html#process">ABLAUF</a>
-        <a href="index.html#contact">KONTAKT</a>
-    </nav>
-</header>
+        <nav>
+            <a href="index.html#about">ÜBER</a>
+            <a href="index.html#signature">SIGNATURE PIECE</a>
+            <a href="galerie.html">GALERIE</a>
+            <a href="index.html#process">ABLAUF</a>
+            <a href="index.html#contact">KONTAKT</a>
+        </nav>
+    </header>
 
-<section class="gallery-section">
-    <h1 class="section-title">Galerie</h1>
+    <section class="gallery-container">
 
-    <div class="art-card">
-        <img src="the-little-rich-mous.jpg" class="art-image rotated">
+        <!-- EINZELNES BILD -->
+        <div class="art-card">
+            <img src="the-little-rich-mous.jpg" alt="The Little Rich Mous">
 
-        <div class="art-info-box">
-            <h2 class="art-title">The Little Rich Mous</h2>
-            <p class="art-details">Acryl auf Leinwand · 69,5 × 49 × 1,5 cm</p>
+            <div class="art-info">
+                <h2>The Little Rich Mous</h2>
 
-            <p class="startprice"><b>Startpreis:</b> 1500 CHF</p>
-            <p class="currentbid"><b>Aktuelles Gebot:</b> 1500 CHF</p>
+                <p>Acryl auf Leinwand • 69,5 × 49 × 1,5 cm</p>
+                <p><b style="color:#b38b40;">Startpreis:</b> 1500 CHF</p>
+                <p><b style="color:#0b0f1a;">Aktuelles Gebot:</b> 1500 CHF</p>
 
-            <a href="detail-little-rich-mous.html" class="btn-more">Details & Bieten ansehen</a>
+                <a class="btn-more" href="detail-little-rich-mous.html">
+                    Details & Bieten ansehen
+                </a>
+            </div>
         </div>
-    </div>
 
-</section>
-
-<footer class="footer">
-    © 2025 Spectrum Bild · Luxury Branding & Art · Alle Rechte vorbehalten.
-</footer>
+    </section>
 
 </body>
+
 </html>

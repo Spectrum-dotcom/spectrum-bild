@@ -515,3 +515,50 @@ h1 {
 .gallery-image-rotated {
     transform: rotate(-90deg);
 }
+.page-title {
+    text-align: center;
+    font-size: 4rem;
+    color: #d6b477;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.gallery-item {
+    background: #f6eddc;
+    padding: 40px;
+    border-radius: 25px;
+    width: 90%;
+    margin: 0 auto 80px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.gallery-img-box {
+    width: 45%;
+}
+
+.gallery-img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.rotated {
+    transform: rotate(-90deg);
+}
+
+.gallery-info {
+    width: 45%;
+}
+
+.gallery-info h2 {
+    font-size: 3rem;
+    color: #1a130d;
+}
+
+.price {
+    font-size: 1.7rem;
+    margin: 15px 0 30px 0;
+    color: #1a130d;
+}

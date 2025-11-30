@@ -1,251 +1,214 @@
-/* ------------------------- */
-/* GLOBAL – Farben & Layout  */
-/* ------------------------- */
-
+/* ------------------------------
+   GLOBAL
+--------------------------------*/
 body {
     margin: 0;
-    padding: 0;
-    background: #0a0f1a; /* Luxus Navy */
-    color: #e6c87c; /* Gold */
-    font-family: "Georgia", serif;
-}
-
-/* Standard Abstände */
-.section {
-    padding: 140px 10% 100px;
-    text-align: center;
+    font-family: "Inter", Arial, sans-serif;
+    background: #0a1124; /* Navy-Schwarz */
+    color: white;
 }
 
 h1, h2, h3 {
-    color: #e6c87c;
-    margin-bottom: 20px;
-    font-weight: 600;
+    margin: 0 0 15px;
 }
 
-p {
-    color: #e6c87c;
-    font-size: 18px;
-    line-height: 1.7;
+a {
+    text-decoration: none;
 }
 
-.center-text {
-    max-width: 700px;
-    margin: 0 auto 40px;
+/* Goldfarbe */
+.gold {
+    color: #d4af37;
 }
 
-/* ------------------------- */
-/* NAVIGATION (Header)       */
-/* ------------------------- */
+/* Warntext */
+.warnung {
+    color: #ffcc00;
+    font-size: 14px;
+    margin-top: 5px;
+}
 
-.nav {
-    background: #000;
-    padding: 20px 50px;
+
+/* ------------------------------
+   HEADER
+--------------------------------*/
+header {
+    width: 100%;
+    padding: 18px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: #0a1124;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .logo {
-    height: 58px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-.nav a {
+nav a {
     margin-left: 30px;
-    text-decoration: none;
-    color: #e6c87c;
-    font-size: 17px;
-}
-
-.nav a:hover {
+    font-size: 15px;
     color: white;
+    transition: 0.3s;
 }
 
-/* ------------------------- */
-/* HERO – Startseite         */
-/* ------------------------- */
+nav a:hover,
+nav a.active {
+    color: #d4af37;
+}
 
+
+/* ------------------------------
+   HERO (Startseite)
+--------------------------------*/
 .hero {
+    padding: 150px 40px;
     text-align: center;
-    padding: 180px 40px;
-}
-
-.tag {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #e6c87c;
-    margin-bottom: 15px;
+    background: linear-gradient(180deg, #0a1124, #111b33);
 }
 
 .hero h1 {
-    font-size: 50px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.subtitle {
-    font-size: 20px;
-    max-width: 600px;
-    margin: 0 auto 40px;
-}
-
-.hero-buttons {
-    margin-top: 20px;
-}
-
-.btn {
-    background: #e6c87c;
-    color: #000;
-    padding: 12px 26px;
-    border-radius: 30px;
-    font-size: 17px;
-    text-decoration: none;
-    margin-right: 12px;
-}
-
-.btn:hover {
-    background: white;
-}
-
-.btn-outline {
-    border: 2px solid #e6c87c;
-    padding: 10px 22px;
-    color: #e6c87c;
-    border-radius: 30px;
-    text-decoration: none;
-}
-
-.btn-outline:hover {
-    background: #e6c87c;
-    color: #000;
-}
-
-/* HERO BILD (WAPPEN) */
-.hero-img {
-    margin-top: 60px;
-    width: 420px;
-    max-width: 90%;
-    filter: drop-shadow(0 0 20px rgba(0,0,0,0.4));
-}
-
-/* ------------------------- */
-/* INFO-BOXEN                */
-/* ------------------------- */
-
-.info-box {
-    background: rgba(255,255,255,0.04);
-    padding: 35px;
-    border-radius: 14px;
-    margin: 30px auto;
-    max-width: 700px;
-}
-
-.info-box h3 {
-    margin-top: 0;
-    color: #e6c87c;
-}
-
-/* ------------------------- */
-/* SIGNATURE PIECE SECTION   */
-/* ------------------------- */
-
-.signature-section {
-    padding: 120px 10% 100px;
-    text-align: center;
-}
-
-.gallery-item {
-    background: white;
-    border-radius: 18px;
-    margin: 60px auto;
-    padding: 30px;
-    max-width: 800px;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.35);
-}
-
-.gallery-img {
-    width: 100%;
-    max-height: 600px;
-    object-fit: contain;
-    border-radius: 12px;
-}
-
-.rotate90 {
-    transform: rotate(-90deg);
-}
-
-.gallery-bar {
-    margin-top: 28px;
-}
-
-.gallery-name {
-    color: #000;
-    font-size: 30px;
+    font-size: 42px;
     margin-bottom: 10px;
 }
 
-.gallery-price {
-    color: #333;
+.hero p {
     font-size: 20px;
+    opacity: 0.9;
 }
 
-/* ------------------------- */
-/* PROCESS SECTION           */
-/* ------------------------- */
 
-.process-grid {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+/* ------------------------------
+   ABSCHNITTE (Über, Ablauf, Kontakt)
+--------------------------------*/
+.section {
+    padding: 90px 40px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
 }
 
-.process-box {
-    background: rgba(255,255,255,0.06);
-    padding: 30px;
-    border-radius: 14px;
-    max-width: 300px;
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
-.process-box h3 {
-    color: #e6c87c;
-    margin-bottom: 20px;
+.section p {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-/* ------------------------- */
-/* CONTACT SECTION           */
-/* ------------------------- */
 
-.mail {
-    color: #e6c87c;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.mail:hover {
+/* ------------------------------
+   BUTTON
+--------------------------------*/
+.btn {
+    display: inline-block;
+    background: #0d1a36;
     color: white;
-}
-
-.footer-text {
-    margin-top: 70px;
-    opacity: 0.7;
+    padding: 14px 26px;
+    border-radius: 10px;
+    margin-top: 15px;
     font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-/* ------------------------- */
-/* RESPONSIVE                */
-/* ------------------------- */
+.btn:hover {
+    background: #d4af37;
+    color: black;
+}
 
-@media (max-width: 830px) {
 
-    .detail-wrapper,
-    .process-grid,
-    .gallery-item {
-        flex-direction: column;
-        text-align: center;
-    }
+/* ------------------------------
+   GALERIE SEITE
+--------------------------------*/
 
-    .gallery-img,
-    .detail-img {
-        width: 100%;
-    }
+.gallery-body {
+    background: #0a1124;
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 40px;
+}
+
+.gallery-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* Die weiße Karte (der Balken) */
+.card {
+    display: flex;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 35px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Bild links */
+.card-img {
+    width: 350px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* Info rechts */
+.card-info {
+    margin-left: 30px;
+    color: black;
+}
+
+.card-info h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.card-info p {
+    margin: 6px 0;
+    font-size: 17px;
+}
+
+
+/* ------------------------------
+   DETAILSEITE 
+--------------------------------*/
+
+.detail-container {
+    max-width: 900px;
+    margin: 70px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    color: black;
+}
+
+.detail-img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+input[type="number"] {
+    padding: 12px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #888;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

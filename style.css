@@ -1,63 +1,55 @@
-/* Grundlayout */
+/* Gesamtes Layout fixen */
 html, body {
-    background-color: #0a0a14;
+    background-color: #0a0a14 !important;
     color: #f1d7a5;
-    font-family: 'Georgia', serif;
+    font-family: Georgia, serif;
     margin: 0;
     padding: 0;
-    max-width: 100%;
     overflow-x: hidden;
+    max-width: 100%;
 }
 
 /* Überschriften */
-h1, h2, h3 {
+h1, h2 {
     color: #f1d7a5;
-    margin: 0 0 20px 0;
 }
 
-/* Button */
+/* Buttons */
 .button {
     background-color: #d7b26d;
     color: #0a0a14;
-    padding: 15px 30px;
+    padding: 14px 28px;
     border-radius: 12px;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
+    margin-top: 20px;
 }
 
 /* Galerie */
 .gallery-section {
-    background-color: #0a0a14;
-    padding: 80px 0;
+    padding: 80px 20px;
     text-align: center;
 }
 
 .gallery-card {
+    display: flex;
     background-color: #fbf3de;
     color: #0a0a14;
-    margin: 40px auto;
-    width: 85%;
-    border-radius: 22px;
     padding: 40px;
-    display: flex;
+    width: 85%;
+    margin: 40px auto;
+    border-radius: 20px;
+    gap: 40px;
     align-items: center;
-    gap: 50px;
 }
 
 .gallery-card img {
-    width: 300px;
-    border-radius: 16px;
+    width: 350px;
+    border-radius: 14px;
 }
 
-/* Fix Bildausrichtung */
+/* Bild rotieren */
 .rotate-90 {
     transform: rotate(-90deg);
-}
-
-/* Navigation Fix */
-nav {
-    padding: 20px;
-    background-color: #0a0a14;
-    text-align: left;
 }

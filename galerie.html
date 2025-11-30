@@ -1,32 +1,59 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Galerie – Spectrum Bild</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Galerie – Spectrum Bild</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <img src="favicon-32x32.png" alt="Spectrum Bild Emblem" class="brand-mark">
+        <span class="brand-name">SPECTRUM BILD</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html#about">ÜBER</a>
+        <a href="galerie.html" class="nav-active">GALERIE</a>
+        <a href="index.html#process">ABLAUF</a>
+        <a href="index.html#contact">KONTAKT</a>
+      </nav>
+    </div>
+  </header>
 
-    <section class="gallery-section">
+  <main>
+    <section class="section section-gallery">
+      <div class="section-heading">
         <h1>Galerie</h1>
+      </div>
 
-        <div class="gallery-card">
-            <img src="the-little-rich-mous.jpg" class="rotate-90" alt="Little Rich Mouse">
-
-            <div>
-                <h2>The Little Rich Mouse</h2>
-                <p>Preis: 1500 CHF</p>
-
-                <a class="button" href="detail-little-rich-mous.html">
-                    Mehr Details & Bieten →
-                </a>
-            </div>
+      <!-- Ein Art-Piece im Balken -->
+      <article class="gallery-card">
+        <div class="gallery-card-image">
+          <img src="the-little-rich-mous.jpg" alt="The Little Rich Mouse" class="art-image-rotated">
         </div>
-
-        <a href="index.html" class="button">Zurück zur Startseite</a>
-
+        <div class="gallery-card-info">
+          <h2>The Little Rich Mouse</h2>
+          <p class="gallery-price">Preis: 1500 CHF</p>
+          <p class="gallery-short">
+            Eine kleine Maus mit grosser Attitude – Gold, Pink und royales Lettering
+            treffen auf Street-Art-Vibes.
+          </p>
+          <a href="detail-little-rich-mous.html" class="primary-button gallery-button">
+            Mehr Details & Bieten →
+          </a>
+        </div>
+      </article>
     </section>
+  </main>
 
+  <footer class="site-footer">
+    <p>© 2025 Spectrum Bild · Luxury Branding & Art · Alle Rechte vorbehalten.</p>
+  </footer>
 </body>
 </html>

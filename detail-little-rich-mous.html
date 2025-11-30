@@ -3,71 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Little Rich Mouse – Details</title>
+    <title>The Little Rich Mous – Details</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="detail-body">
+<body>
 
-<header class="nav">
-    <img src="logo.png" class="logo">
+<header>
+    <div class="logo">Spectrum Bild</div>
     <nav>
-        <a href="index.html#about">ÜBER</a>
-        <a href="index.html#signature">SIGNATURE PIECE</a>
-        <a href="galerie.html" class="active">GALERIE</a>
-        <a href="index.html#process">ABLAUF</a>
-        <a href="index.html#contact">KONTAKT</a>
+        <a href="index.html">Home</a>
+        <a href="galerie.html" class="active">Galerie</a>
     </nav>
 </header>
 
-<section class="detail-section">
+<div class="detail-container">
+    <img src="the-little-rich-mous.jpg" class="detail-img" alt="The Little Rich Mous">
 
-    <h1 class="detail-title">The Little Rich Mouse</h1>
+    <h2>The Little Rich Mous</h2>
+    <p>Acryl auf Leinwand – 69,5 × 49 × 1,5 cm</p>
+    <p><strong>Startpreis:</strong> 1500 CHF</p>
+    <p><strong>Aktuelles Gebot:</strong> 1500 CHF</p>
 
-    <div class="detail-wrapper">
+    <h3>Neues Gebot abgeben</h3>
+    <p class="warnung">⚠️ Nach Abgabe kann ein Gebot nicht mehr zurückgesetzt werden.</p>
 
-        <!-- Bild links -->
-        <img src="the-little-rich-mous-back.jpg" class="detail-img rotate90">
+    <input type="number" id="gebot" placeholder="Neues Gebot in CHF eingeben">
 
-        <!-- Details rechts -->
-        <div class="detail-info">
+    <a class="btn" href="mailto:spectrum.art.mail@gmail.com?subject=Gebot%20Little%20Rich%20Mous&body=Mein%20Gebot:%20">
+        Gebot jetzt senden
+    </a>
 
-            <p class="detail-text">
-                <strong>Material:</strong> Acryl auf Leinwand<br>
-                <strong>Grösse:</strong> 69.5 × 49 × 1.5 cm
-            </p>
-
-            <p class="detail-price">
-                <strong>Startpreis:</strong> 500 CHF<br>
-                <strong>Aktuelles Gebot:</strong> 500 CHF
-            </p>
-
-            <p class="detail-warning">
-                Hinweis: Ein gesetztes Gebot kann nicht zurückgezogen werden.
-                Du darfst jedoch ein neues, höheres Gebot abgeben.
-            </p>
-
-            <!-- Bieten Formular -->
-            <form class="bid-form">
-                <label>Dein Gebot in CHF:</label>
-                <input type="number" min="1" required>
-
-                <button type="submit" class="bid-btn">
-                    Gebot abgeben
-                </button>
-            </form>
-
-            <p class="detail-contact">
-                Bei Fragen zur Auktion – einfach melden:
-                <br>
-                <a href="mailto:sophia.zuechner@gmail.com" class="mail-link">
-                    sophia.zuechner@gmail.com
-                </a>
-            </p>
-
-        </div>
-    </div>
-</section>
+    <br><br>
+    <a class="btn" href="galerie.html" style="background:#333;">Zurück zur Galerie</a>
+</div>
 
 </body>
 </html>

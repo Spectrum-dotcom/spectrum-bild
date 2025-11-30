@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Little Rich Mous – Details</title>
+    <title>The Little Rich Mouse – Details</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,33 +14,59 @@
     <nav>
         <a href="index.html#about">ÜBER</a>
         <a href="index.html#signature">SIGNATURE PIECE</a>
-        <a href="galerie.html">GALERIE</a>
+        <a href="galerie.html" class="active">GALERIE</a>
         <a href="index.html#process">ABLAUF</a>
         <a href="index.html#contact">KONTAKT</a>
     </nav>
 </header>
 
-<section class="detail-container">
+<section class="detail-section">
 
-    <img src="the-little-rich-mous.jpg" class="detail-img rotated">
+    <h1 class="detail-title">The Little Rich Mouse</h1>
 
-    <div class="detail-info">
-        <h1>The Little Rich Mous</h1>
-        <p class="detail-size">Acryl auf Leinwand – 69,5 × 49 × 1,5 cm</p>
+    <div class="detail-wrapper">
 
-        <p class="detail-start">Startpreis: <b>1500 CHF</b></p>
-        <p class="detail-current">Aktuelles Gebot: <b>1500 CHF</b></p>
+        <!-- Bild links -->
+        <img src="the-little-rich-mous-back.jpg" class="detail-img rotate90">
 
-        <p class="detail-note">
-            Nach Abgabe eines Gebots kann dieses nicht zurückgezogen werden.
-            Du darfst aber ein neues, höheres Gebot abgeben.
-        </p>
+        <!-- Details rechts -->
+        <div class="detail-info">
 
-        <a href="mailto:sophia.zuechner@gmail.com" class="detail-btn">
-            Gebot abgeben
-        </a>
+            <p class="detail-text">
+                <strong>Material:</strong> Acryl auf Leinwand<br>
+                <strong>Grösse:</strong> 69.5 × 49 × 1.5 cm
+            </p>
+
+            <p class="detail-price">
+                <strong>Startpreis:</strong> 500 CHF<br>
+                <strong>Aktuelles Gebot:</strong> 500 CHF
+            </p>
+
+            <p class="detail-warning">
+                Hinweis: Ein gesetztes Gebot kann nicht zurückgezogen werden.
+                Du darfst jedoch ein neues, höheres Gebot abgeben.
+            </p>
+
+            <!-- Bieten Formular -->
+            <form class="bid-form">
+                <label>Dein Gebot in CHF:</label>
+                <input type="number" min="1" required>
+
+                <button type="submit" class="bid-btn">
+                    Gebot abgeben
+                </button>
+            </form>
+
+            <p class="detail-contact">
+                Bei Fragen zur Auktion – einfach melden:
+                <br>
+                <a href="mailto:sophia.zuechner@gmail.com" class="mail-link">
+                    sophia.zuechner@gmail.com
+                </a>
+            </p>
+
+        </div>
     </div>
-
 </section>
 
 </body>

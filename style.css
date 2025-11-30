@@ -508,5 +508,7 @@ h1 {
 
     .contact-box {
         padding-inline: 1.7rem;
-    }
+    }.gallery-image-rotated {
+    transform: rotate(-90deg);
+}
 }

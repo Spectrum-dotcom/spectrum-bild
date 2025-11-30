@@ -349,4 +349,63 @@ footer {
 
 .gallery-card-btn:hover {
     opacity: 0.7;
+}/* --- GALERIE LUXUS BALKEN --- */
+
+.gallery-body {
+    background: #0a0a13;
+    padding: 40px;
+}
+
+.galerie-title {
+    text-align: center;
+    color: #e6c889;
+    font-size: 60px;
+    margin-bottom: 60px;
+    font-family: 'Georgia', serif;
+}
+
+.gallery-item {
+    display: flex;
+    align-items: center;
+    background: #f8f1e0;
+    border-radius: 18px;
+    padding: 25px;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.gallery-img {
+    width: 260px;
+    height: auto;
+    border-radius: 14px;
+}
+
+.gallery-info {
+    margin-left: 30px;
+}
+
+.gallery-name {
+    font-size: 32px;
+    color: #1a1a1a;
+}
+
+.gallery-price {
+    font-size: 22px;
+    margin: 10px 0 20px 0;
+    color: #333;
+}
+
+.gallery-button {
+    background: #c9a86a;
+    color: white;
+    padding: 12px 18px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.gallery-button:hover {
+    background: #b89454;
 }

@@ -75,4 +75,86 @@ nav a:hover {
 
 .card-info {
     margin-left: 30px;
+}/* GALLERY PAGE */
+.gallery-body, .detail-body {
+    background-color: #050A18;
+    color: #E5C07B;
+    font-family: 'Georgia', serif;
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: 42px;
+    margin-top: 120px;
+    margin-bottom: 60px;
+    color: #E5C07B;
+}
+
+.gallery-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.gallery-item {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+}
+
+.gallery-img {
+    width: 380px;
+    border-radius: 12px;
+}
+
+/* 90° Drehung */
+.rotated {
+    transform: rotate(-90deg);
+}
+
+.gallery-info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gallery-btn {
+    margin-top: 20px;
+    background: #0F1628;
+    padding: 14px 22px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    width: fit-content;
+}
+
+/* DETAIL PAGE */
+.detail-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 140px auto;
+    display: flex;
+    gap: 40px;
+}
+
+.detail-img {
+    width: 420px;
+    border-radius: 12px;
+}
+
+.detail-info h1 {
+    font-size: 42px;
+    color: #E5C07B;
+}
+
+.detail-btn {
+    background: #0F1628;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 30px;
+    display: inline-block;
 }

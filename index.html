@@ -1,614 +1,157 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <title>Spectrum Bild – Luxury Branding & Art</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectrum Bild – Kunst & Auktionen</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Spectrum Bild verbindet royale Symbolik, Street-Attitude und modernen Luxus. Handgemachte Art-Pieces & digitale Logos – designed mit Herz in der Schweiz." />
+    <style>
+        body {
+            margin: 0;
+            background: #0a1a33;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
 
-  <!-- Favicon / App Icons (Dateien hast du schon im Repo) -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+        /* NAVIGATION */
+        .navbar {
+            background: black;
+            color: gold;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
 
-  <!-- Schrift (System-Fonts, damit es einfach bleibt) -->
-  <style>
-    :root {
-      --bg: #050711;
-      --bg-soft: #101321;
-      --navy: #0b1020;
-      --gold: #d4af37;
-      --gold-soft: #f1d89a;
-      --text: #f7f0e6;
-      --muted: #c6b8a0;
-      --pill-bg: rgba(212, 175, 55, 0.12);
-      --card-border: rgba(255, 255, 255, 0.04);
-      --shadow-soft: 0 18px 55px rgba(0, 0, 0, 0.6);
-      --radius-xl: 28px;
-      --radius-lg: 22px;
-    }
+        .nav-links {
+            margin-top: 8px;
+        }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+        .nav-links a {
+            color: gold;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 15px;
+        }
 
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #14182b 0, #050711 40%, #020308 100%);
-      color: var(--text);
-      line-height: 1.6;
-    }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+        /* SECTION */
+        .section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 20px;
+        }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+        h2 {
+            color: gold;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
 
-    /* NAVBAR */
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: linear-gradient(to bottom, rgba(5, 7, 17, 0.98), rgba(5, 7, 17, 0.94));
-      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(18px);
-    }
+        p {
+            font-size: 17px;
+            line-height: 1.6;
+        }
 
-    .nav-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 14px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
+        /* Button */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 22px;
+            background: gold;
+            color: black;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+        .btn:hover {
+            background: #d4af37;
+        }
 
-    .nav-logo-circle {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      overflow: hidden;
-      border: 1px solid rgba(212, 175, 55, 0.7);
-      background: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 18px rgba(212, 175, 55, 0.45);
-    }
-
-    .nav-logo-circle img {
-      width: 26px;
-      height: 26px;
-      object-fit: cover;
-    }
-
-    .nav-logo-text {
-      font-family: "Georgia", "Times New Roman", serif;
-      font-size: 20px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold-soft);
-      white-space: nowrap;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 26px;
-      align-items: center;
-      font-size: 14px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .nav-links a {
-      position: relative;
-      padding-bottom: 4px;
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 1px;
-      background: var(--gold);
-      transition: width 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold-soft);
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .nav-cta {
-      padding: 8px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(212, 175, 55, 0.7);
-      font-size: 12px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--gold-soft);
-      background: radial-gradient(circle at top, rgba(247, 226, 160, 0.1), transparent 60%);
-    }
-
-    .nav-cta:hover {
-      background: radial-gradient(circle at top, rgba(247, 226, 160, 0.18), transparent 60%);
-    }
-
-    /* SECTIONS */
-    .section {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 72px 22px 84px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
-      gap: 56px;
-      align-items: center;
-      padding-top: 80px;
-      padding-bottom: 90px;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 7px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(212, 175, 55, 0.5);
-      background: var(--pill-bg);
-      font-size: 11px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--gold-soft);
-      margin-bottom: 18px;
-    }
-
-    .pill-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #f6b25c;
-      box-shadow: 0 0 8px rgba(246, 178, 92, 0.9);
-    }
-
-    .hero-title {
-      font-family: "Georgia", "Times New Roman", serif;
-      font-size: 46px;
-      line-height: 1.15;
-      color: var(--gold-soft);
-      margin-bottom: 20px;
-    }
-
-    .hero-text {
-      font-size: 16px;
-      color: var(--muted);
-      margin-bottom: 28px;
-      max-width: 540px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      align-items: center;
-      margin-bottom: 22px;
-    }
-
-    .btn-primary {
-      padding: 12px 24px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-size: 13px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      background: linear-gradient(135deg, #f6d88d, #d4af37);
-      color: #21160a;
-      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.65);
-    }
-
-    .btn-primary:hover {
-      filter: brightness(1.03);
-      transform: translateY(-1px);
-    }
-
-    .btn-ghost {
-      padding: 11px 22px;
-      border-radius: 999px;
-      border: 1px solid rgba(212, 175, 55, 0.5);
-      background: transparent;
-      color: var(--gold-soft);
-      font-size: 13px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      cursor: pointer;
-    }
-
-    .btn-ghost:hover {
-      background: rgba(212, 175, 55, 0.08);
-    }
-
-    .hero-note {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 10px;
-    }
-
-    .hero-image-wrap {
-      justify-self: center;
-    }
-
-    .hero-image-card {
-      border-radius: 999px;
-      padding: 14px 20px;
-      background: radial-gradient(circle at top, #1f243b, #050711);
-      border: 1px solid rgba(255, 255, 255, 0.04);
-      box-shadow: var(--shadow-soft);
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .hero-emblem {
-      width: 190px;
-      height: 190px;
-      border-radius: 999px;
-      overflow: hidden;
-      border: 2px solid rgba(212, 175, 55, 0.7);
-      background: #000;
-    }
-
-    .hero-emblem img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-emblem-text {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .hero-emblem-text span {
-      display: block;
-      font-size: 16px;
-      color: var(--gold-soft);
-      margin-bottom: 4px;
-    }
-
-    /* Abschnitt Überschrift */
-    .section-title {
-      font-family: "Georgia", "Times New Roman", serif;
-      font-size: 32px;
-      color: var(--gold-soft);
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    .section-subtitle {
-      font-size: 15px;
-      color: var(--muted);
-      text-align: center;
-      max-width: 620px;
-      margin: 0 auto 40px;
-    }
-
-    /* CARDS – ÜBER & ABLAUF */
-    .card-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-    }
-
-    .info-card {
-      background: radial-gradient(circle at top left, #272133, #101321 55%, #070915 100%);
-      border-radius: var(--radius-xl);
-      border: 1px solid var(--card-border);
-      padding: 26px 26px 24px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65);
-    }
-
-    .info-card h3 {
-      font-family: "Georgia", "Times New Roman", serif;
-      font-size: 20px;
-      color: var(--gold-soft);
-      margin-bottom: 12px;
-    }
-
-    .info-card p {
-      font-size: 15px;
-      color: var(--muted);
-    }
-
-    .step-label {
-      font-size: 12px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 6px;
-    }
-
-    /* KONTAKT */
-    .contact-card {
-      max-width: 720px;
-      margin: 0 auto;
-      border-radius: var(--radius-xl);
-      padding: 30px 26px 26px;
-      background: radial-gradient(circle at top, #241c32, #101321 55%, #060814 100%);
-      border: 1px solid var(--card-border);
-      box-shadow: var(--shadow-soft);
-      text-align: center;
-    }
-
-    .contact-card p {
-      color: var(--muted);
-      font-size: 15px;
-      margin-bottom: 24px;
-    }
-
-    .contact-mail {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 9px 18px;
-      border-radius: 999px;
-      background: rgba(5, 7, 17, 0.85);
-      border: 1px solid rgba(212, 175, 55, 0.6);
-      color: var(--gold-soft);
-      font-size: 14px;
-      margin-bottom: 18px;
-    }
-
-    .contact-mail span {
-      font-size: 13px;
-      color: var(--muted);
-      margin-left: 4px;
-    }
-
-    .contact-note {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid rgba(255, 255, 255, 0.04);
-      padding: 18px 22px 26px;
-      margin-top: 40px;
-      font-size: 12px;
-      color: var(--muted);
-      text-align: center;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 920px) {
-      .hero {
-        grid-template-columns: 1fr;
-        padding-top: 60px;
-      }
-
-      .hero-image-wrap {
-        order: -1;
-      }
-
-      .nav-links {
-        display: none;
-      }
-    }
-
-    @media (min-width: 760px) {
-      .card-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .card-grid.about-cards .info-card {
-        min-height: 210px;
-      }
-
-      .card-grid.process-cards .info-card {
-        min-height: 230px;
-      }
-    }
-  </style>
+    </style>
 </head>
-
 <body>
-  <!-- NAVIGATION -->
-  <header class="navbar">
-    <div class="nav-inner">
-      <a href="#top" class="nav-logo">
-        <div class="nav-logo-circle">
-          <img src="favicon-32x32.png" alt="Spectrum Bild Logo" />
+
+    <!-- NAVIGATION -->
+    <div class="navbar">
+        SPECTRUM BILD
+        <div class="nav-links">
+            <a href="#about">Über</a>
+            <a href="#ablauf">Ablauf</a>
+            <a href="#kontakt">Kontakt</a>
+            <a href="galerie.html">Galerie</a>
         </div>
-        <div class="nav-logo-text">SPECTRUM BILD</div>
-      </a>
-      <nav class="nav-links">
-        <a href="#about">Über</a>
-        <a href="#signature">Signature Piece</a>
-        <a href="galerie.html">Galerie</a>
-        <a href="#process">Ablauf</a>
-        <a href="#contact">Kontakt</a>
-        <a href="#contact" class="nav-cta">Anfrage senden</a>
-      </nav>
     </div>
-  </header>
 
-  <main id="top">
-    <!-- HERO / SIGNATURE PIECE TEASER -->
-    <section class="section hero" id="signature">
-      <div>
-        <div class="pill">
-          <span class="pill-dot"></span>
-          <span>Luxury Branding &amp; Art</span>
-        </div>
-        <h1 class="hero-title">
-          Goldene Logos &amp; Art-Pieces für mutige Marken.
-        </h1>
-        <p class="hero-text">
-          Spectrum Bild verbindet royale Symbolik, edle Typografie und luxuriöse Farbwelten.
-          Jede Arbeit ist ein Unikat – gemacht, um aufzufallen.
+    <!-- HERO / INTRO -->
+    <section class="section">
+        <h2>Goldene Logos & Art-Pieces für mutige Marken.</h2>
+        <p>
+            Kunst, Luxus und ein Hauch von Rebellion – das ist Spectrum Bild.
+            Hier treffen moderne Designs auf royale Symbolik, kombiniert mit edlen Farben
+            wie Gold, Schwarz und Navy Blue.
         </p>
 
-        <div class="hero-actions">
-          <a href="galerie.html" class="btn-primary">Signature Piece ansehen</a>
-          <a href="#contact" class="btn-ghost">Anfrage senden</a>
-        </div>
-
-        <p class="hero-note">
-          Handgemachte Art-Pieces &amp; digitale Logos – designed mit ❤️ in der Schweiz.
-        </p>
-        <div class="hero-badge">
-          <span>•</span> Limited Pieces · individuelle Logos · keine Massenware
-        </div>
-      </div>
-
-      <div class="hero-image-wrap">
-        <div class="hero-image-card">
-          <div class="hero-emblem">
-            <!-- dein Emblem-Bild -->
-            <img src="63cca90b-d541-4bc3-ae72-4c8af4450564.png" alt="Spectrum Bild Emblem" />
-          </div>
-          <div class="hero-emblem-text">
-            <span>Spectrum Bild Emblem</span>
-            Königliche Optik, Street-Vibes und Gold – der typische Spectrum-Bild-Look,
-            der sich wie ein modernes Wappen anfühlt.
-          </div>
-        </div>
-      </div>
+        <a class="btn" href="galerie.html">Zur Galerie</a>
     </section>
 
     <!-- ÜBER SPECTRUM BILD -->
     <section class="section" id="about">
-      <h2 class="section-title">Über Spectrum Bild</h2>
-      <p class="section-subtitle">
-        Eine Mischung aus königlichem Wappen, Street-Attitude und modernem Luxus.
-      </p>
-
-      <div class="card-grid about-cards">
-        <article class="info-card">
-          <h3>Luxus, aber mit einem Augenzwinkern.</h3>
-          <p>
-            Spectrum Bild spielt bewusst mit Symbolen von Reichtum: Kronen, Löwen, Initialen –
-            kombiniert mit frechen Motiven wie einer kleinen, reichen Maus.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Gold &amp; Schwarz als Signature Look.</h3>
-          <p>
-            Die Farbwelt ist klar: tiefes Schwarz, warmes Gold, minimale Kontraste.
-            Dadurch wirken Logos und Art-Pieces zeitlos, stark und hochwertig –
-            egal ob digital oder auf Leinwand.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Von der Idee zum Logo.</h3>
-          <p>
-            Jede Arbeit startet mit einer Story: Wer bist du? Wie soll sich deine Marke anfühlen?
-            Daraus entsteht ein visuelles Emblem, das sich wie ein echtes Familienwappen anfühlt –
-            nur moderner.
-          </p>
-        </article>
-      </div>
+        <h2>Über Spectrum Bild</h2>
+        <p>
+            Eine Mischung aus königlichem Wappen, Street-Attitude und modernem Luxus.
+        </p>
+        <p>
+            Spectrum Bild spielt bewusst mit Symbolen von Reichtum: Kronen, Initialen,
+            goldene Ornamente und freche Motive wie eine kleine, reiche Maus.
+        </p>
+        <p>
+            <strong>Luxus, aber mit einem Augenzwinkern.</strong><br>
+            Die Farbwelt ist klar: tiefes Navy, warmes Gold und starke Kontraste.
+            Dadurch wirken die Art-Pieces zeitlos, kraftvoll und hochwertig – egal ob digital
+            oder auf Leinwand.
+        </p>
+        <p>
+            <strong>Von der Idee zum Kunstwerk.</strong><br>
+            Jede Arbeit entsteht mit einer Story: Wie soll sich das Werk anfühlen?
+            Welche Emotion? Welche Wirkung?  
+            Das Ergebnis: ein Kunststück, das wie ein modernes Emblem wirkt – edel und einzigartig.
+        </p>
     </section>
 
     <!-- ABLAUF -->
-    <section class="section" id="process">
-      <h2 class="section-title">So entsteht dein Logo oder Art-Piece</h2>
-      <p class="section-subtitle">
-        Klarer Prozess, viel Gefühl – damit das Ergebnis wirklich zu dir passt.
-      </p>
+    <section class="section" id="ablauf">
+        <h2>Ablauf</h2>
+        <p>
+            1. Wähle ein Artwork in der Galerie aus.  
+            2. Öffne die Detailseite und gib ein Gebot ab.  
+            3. Das höchste Gebot nach Ablauf der Frist gewinnt.  
+            4. Du wirst per E-Mail kontaktiert, um Zahlung & Versand zu klären.  
+        </p>
 
-      <div class="card-grid process-cards">
-        <article class="info-card">
-          <div class="step-label">Schritt 1</div>
-          <h3>Vibe &amp; Vision</h3>
-          <p>
-            Du erzählst, wer du bist, was du liebst und wie sich deine Marke anfühlen soll.
-            Kein komplizierter Fragebogen – einfach ein ehrliches Gespräch.
-          </p>
-        </article>
+        <p>
+            ⚠️ <strong>Wichtig:</strong> Ein abgegebenes Gebot kann nicht zurückgezogen werden.
+        </p>
 
-        <article class="info-card">
-          <div class="step-label">Schritt 2</div>
-          <h3>Design &amp; Skizzen</h3>
-          <p>
-            Auf Basis deiner Story entstehen erste Ideen, Symbole und Layouts.
-            Gold, Typografie und Formen werden so kombiniert, dass dein ganz eigenes Emblem entsteht.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <div class="step-label">Schritt 3</div>
-          <h3>Final &amp; Übergabe</h3>
-          <p>
-            Du erhältst dein finales Logo oder Art-Piece – bereit für Social Media, Druck
-            oder als physische Leinwand.
-          </p>
-        </article>
-      </div>
+        <a class="btn" href="galerie.html">Zur Galerie</a>
     </section>
 
     <!-- KONTAKT -->
-    <section class="section" id="contact">
-      <h2 class="section-title">Kontakt &amp; Anfragen</h2>
-      <p class="section-subtitle">
-        Du möchtest ein Logo, ein Emblem oder ein eigenes Art-Piece im Spectrum-Bild-Style?
-      </p>
-
-      <div class="contact-card">
+    <section class="section" id="kontakt">
+        <h2>Kontakt</h2>
         <p>
-          Schreib einfach eine Mail mit ein paar Infos zu dir und deiner Idee.
-          Du musst noch nichts Perfektes formulieren – wir finden den Rest gemeinsam heraus.
+            Hast du Fragen zur Auktion oder zum Ablauf?
+            Kontaktiere mich jederzeit – ich melde mich schnell zurück.
         </p>
-
-        <a class="contact-mail" href="mailto:sophia.zuechner@gmail.com">
-          ✉️ sophia.zuechner@gmail.com
-          <span>(Klick öffnet dein Mail-Programm)</span>
-        </a>
-
-        <p class="contact-note">
-          Auf Wunsch sind auch Auftragsarbeiten, limitierte Editions und personalisierte Embleme möglich.
+        <p>
+            📧 <a href="mailto:spectrum.art.mail@gmail.com" style="color: gold;">spectrum.art.mail@gmail.com</a>
         </p>
-      </div>
     </section>
-  </main>
 
-  <footer>
-    © 2025 Spectrum Bild · Luxury Branding &amp; Art · Alle Rechte vorbehalten.
-  </footer>
 </body>
 </html>

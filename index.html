@@ -1,157 +1,103 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spectrum Bild – Kunst & Auktionen</title>
-
-    <style>
-        body {
-            margin: 0;
-            background: #0a1a33;
-            font-family: Arial, sans-serif;
-            color: white;
-        }
-
-        /* NAVIGATION */
-        .navbar {
-            background: black;
-            color: gold;
-            padding: 20px;
-            text-align: center;
-            font-size: 28px;
-            letter-spacing: 4px;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            margin-top: 8px;
-        }
-
-        .nav-links a {
-            color: gold;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 15px;
-        }
-
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-
-        /* SECTION */
-        .section {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 20px;
-        }
-
-        h2 {
-            color: gold;
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 17px;
-            line-height: 1.6;
-        }
-
-        /* Button */
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 22px;
-            background: gold;
-            color: black;
-            border-radius: 999px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .btn:hover {
-            background: #d4af37;
-        }
-
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spectrum Bild</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-    <!-- NAVIGATION -->
-    <div class="navbar">
-        SPECTRUM BILD
-        <div class="nav-links">
-            <a href="#about">Über</a>
-            <a href="#ablauf">Ablauf</a>
-            <a href="#kontakt">Kontakt</a>
-            <a href="galerie.html">Galerie</a>
+<header class="nav">
+    <img src="logo.png" class="logo" alt="Spectrum Bild Logo">
+    <nav>
+        <a href="#about">ÜBER</a>
+        <a href="#signature">SIGNATURE PIECE</a>
+        <a href="gallery.html">GALERIE</a>
+        <a href="#process">ABLAUF</a>
+        <a href="#contact">KONTAKT</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-left">
+        <div class="tag">• Luxury Branding & Art</div>
+        <h1>Goldene Logos & Art-Pieces<br>für mutige Marken.</h1>
+        <p>Spectrum Bild verbindet royale Symbolik, edle Typografie und luxuriöse Farbwelten. Jede Arbeit ist ein Unikat – gemacht, um aufzufallen.</p>
+
+        <div class="hero-buttons">
+            <a href="gallery.html" class="btn gold">Signature Piece ansehen</a>
+            <a href="#contact" class="btn dark">Anfrage senden</a>
         </div>
     </div>
 
-    <!-- HERO / INTRO -->
-    <section class="section">
-        <h2>Goldene Logos & Art-Pieces für mutige Marken.</h2>
-        <p>
-            Kunst, Luxus und ein Hauch von Rebellion – das ist Spectrum Bild.
-            Hier treffen moderne Designs auf royale Symbolik, kombiniert mit edlen Farben
-            wie Gold, Schwarz und Navy Blue.
-        </p>
+    <div class="hero-right">
+        <img src="emblem.png" class="emblem">
+    </div>
+</section>
 
-        <a class="btn" href="galerie.html">Zur Galerie</a>
-    </section>
+<section id="about" class="about">
+    <h2>Über Spectrum Bild</h2>
+    <p class="subtitle">Eine Mischung aus königlichem Wappen, Street-Attitude und modernem Luxus.</p>
 
-    <!-- ÜBER SPECTRUM BILD -->
-    <section class="section" id="about">
-        <h2>Über Spectrum Bild</h2>
-        <p>
-            Eine Mischung aus königlichem Wappen, Street-Attitude und modernem Luxus.
-        </p>
-        <p>
-            Spectrum Bild spielt bewusst mit Symbolen von Reichtum: Kronen, Initialen,
-            goldene Ornamente und freche Motive wie eine kleine, reiche Maus.
-        </p>
-        <p>
-            <strong>Luxus, aber mit einem Augenzwinkern.</strong><br>
-            Die Farbwelt ist klar: tiefes Navy, warmes Gold und starke Kontraste.
-            Dadurch wirken die Art-Pieces zeitlos, kraftvoll und hochwertig – egal ob digital
-            oder auf Leinwand.
-        </p>
-        <p>
-            <strong>Von der Idee zum Kunstwerk.</strong><br>
-            Jede Arbeit entsteht mit einer Story: Wie soll sich das Werk anfühlen?
-            Welche Emotion? Welche Wirkung?  
-            Das Ergebnis: ein Kunststück, das wie ein modernes Emblem wirkt – edel und einzigartig.
-        </p>
-    </section>
+    <div class="about-box">
+        <h3>Luxus, aber mit einem Augenzwinkern.</h3>
+        <p>Spectrum Bild spielt bewusst mit Symbolen von Reichtum: Kronen, Löwen, Initialen – kombiniert mit frechen Motiven wie einer kleinen, reichen Maus.</p>
+    </div>
 
-    <!-- ABLAUF -->
-    <section class="section" id="ablauf">
-        <h2>Ablauf</h2>
-        <p>
-            1. Wähle ein Artwork in der Galerie aus.  
-            2. Öffne die Detailseite und gib ein Gebot ab.  
-            3. Das höchste Gebot nach Ablauf der Frist gewinnt.  
-            4. Du wirst per E-Mail kontaktiert, um Zahlung & Versand zu klären.  
-        </p>
+    <div class="about-box">
+        <h3>Gold & Schwarz als Signature Look.</h3>
+        <p>Die Farbwelt ist klar: tiefes Schwarz, warmes Gold, minimale Kontraste. Dadurch wirken Logos und Art-Pieces zeitlos, stark und hochwertig – egal ob digital oder auf Leinwand.</p>
+    </div>
 
-        <p>
-            ⚠️ <strong>Wichtig:</strong> Ein abgegebenes Gebot kann nicht zurückgezogen werden.
-        </p>
+    <div class="about-box">
+        <h3>Von der Idee zum Logo.</h3>
+        <p>Jede Arbeit startet mit einer Story: Wer bist du? Wie soll sich deine Marke anfühlen? Daraus entsteht ein visuelles Emblem, das sich wie ein echtes Familienwappen anfühlt – nur moderner.</p>
+    </div>
+</section>
 
-        <a class="btn" href="galerie.html">Zur Galerie</a>
-    </section>
+<section id="process" class="process">
+    <h2>So entsteht dein Logo oder Art-Piece</h2>
+    <p class="subtitle">Klarer Prozess, viel Gefühl – damit das Ergebnis wirklich zu dir passt.</p>
 
-    <!-- KONTAKT -->
-    <section class="section" id="kontakt">
-        <h2>Kontakt</h2>
-        <p>
-            Hast du Fragen zur Auktion oder zum Ablauf?
-            Kontaktiere mich jederzeit – ich melde mich schnell zurück.
-        </p>
-        <p>
-            📧 <a href="mailto:spectrum.art.mail@gmail.com" style="color: gold;">spectrum.art.mail@gmail.com</a>
-        </p>
-    </section>
+    <div class="steps">
+
+        <div class="step">
+            <h4>Schritt 1</h4>
+            <h3>Vibe & Vision</h3>
+            <p>Du erzählst, wer du bist, was du liebst und wie sich deine Marke anfühlen soll. Ein ehrliches Gespräch – keine komplizierten Formulare.</p>
+        </div>
+
+        <div class="step">
+            <h4>Schritt 2</h4>
+            <h3>Design & Skizzen</h3>
+            <p>Auf Basis deiner Story entstehen erste Ideen, Symbole und Layouts. Gold, Typografie und Formen werden kombiniert, bis dein eigenes Emblem entsteht.</p>
+        </div>
+
+        <div class="step">
+            <h4>Schritt 3</h4>
+            <h3>Final & Übergabe</h3>
+            <p>Du erhältst dein finales Logo oder Art-Piece – bereit für Social Media, Druck oder als physische Leinwand.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Kontakt & Anfragen</h2>
+    <p>Schreib einfach eine Mail mit ein paar Infos.  
+    Auf Wunsch sind auch Auftragsarbeiten, limitierte Editions und personalisierte Embleme möglich.</p>
+
+    <div class="contact-box">
+        <p>📧 sophia.zuechner@gmail.com</p>
+        <p>Bei Fragen zur Auktion einfach melden.</p>
+    </div>
+</section>
+
+<footer>
+    © 2025 Spectrum Bild · Luxury Branding & Art
+</footer>
 
 </body>
 </html>

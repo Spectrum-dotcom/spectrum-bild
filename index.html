@@ -3,104 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spectrum Bild</title>
+    <title>Spectrum Bild – Goldene Logos & Art-Pieces</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <!-- NAVIGATION -->
+    <header class="nav">
+        <div class="nav-left">
+            <img src="logo.png" alt="Spectrum Bild Logo" class="logo">
+            <span class="brand-name">SPECTRUM BILD</span>
+        </div>
 
-<header class="nav">
-    <img src="logo.png" class="logo">
-    <nav>
-        <a href="#about">ÜBER</a>
-        <a href="#signature">SIGNATURE PIECE</a>
-        <a href="galerie.html">GALERIE</a>
-        <a href="#process">ABLAUF</a>
-        <a href="#contact">KONTAKT</a>
-    </nav>
-</header>
+        <nav class="nav-links">
+            <a href="index.html#about">ÜBER</a>
+            <a href="index.html#signature">SIGNATURE PIECE</a>
+            <a href="galerie.html">GALERIE</a>
+            <a href="index.html#process">ABLAUF</a>
+            <a href="index.html#contact">KONTAKT</a>
+        </nav>
+    </header>
 
-<section class="hero">
-    <div class="hero-left">
-        <div class="tag">• LUXURY BRANDING & ART</div>
-        <h1>Goldene Logos & Art-Pieces<br>für mutige Marken.</h1>
-        <p>
-            Spectrum Bild verbindet royale Symbolik, edle Typografie und luxuriöse Farbwelten.
-            Jede Arbeit ist ein Unikat – gemacht, um aufzufallen.
+    <!-- HERO / START -->
+    <section class="hero">
+        <div class="hero-left">
+            <div class="tag">LUXURY BRANDING & ART</div>
+            <h1>Goldene Logos &amp; Art-Pieces für mutige Marken.</h1>
+            <p class="hero-text">
+                Spectrum Bild verbindet royale Symbolik, edle Typografie und luxuriöse Farbwelten.
+                Jede Arbeit ist ein Unikat – gemacht, um aufzufallen.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="galerie.html" class="btn btn-primary">SIGNATURE PIECE ANSEHEN</a>
+                <a href="#contact" class="btn btn-ghost">ANFRAGE SENDEN</a>
+            </div>
+
+            <p class="hero-footnote">
+                Handgemachte Art-Pieces &amp; digitale Logos – designed mit ❤️ in der Schweiz.
+            </p>
+        </div>
+
+        <div class="hero-right">
+            <div class="hero-emblem">
+                <span class="hero-emblem-label">Spectrum Bild Emblem</span>
+                <!-- wenn du ein Bild hast, hier einsetzen -->
+                <!-- <img src="dein-emblem.png" alt="Spectrum Bild Emblem"> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ÜBER -->
+    <section id="about" class="section">
+        <h2>Über Spectrum Bild</h2>
+        <p class="section-subtitle">
+            Eine Mischung aus königlichem Wappen, Street-Attitude und modernem Luxus.
         </p>
 
-        <div class="btn-row">
-            <a class="btn" href="#signature">SIGNATURE PIECE ANSEHEN</a>
-            <a class="btn-outline" href="#contact">ANFRAGE SENDEN</a>
+        <div class="info-cards">
+            <article class="info-card">
+                <h3>Luxus, aber mit einem Augenzwinkern.</h3>
+                <p>
+                    Spectrum Bild spielt bewusst mit Symbolen von Reichtum: Kronen, Löwen, Initialen –
+                    kombiniert mit frechen Motiven wie einer kleinen, reichen Maus.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <h3>Gold &amp; Schwarz als Signature Look.</h3>
+                <p>
+                    Die Farbwelt ist klar: tiefes Schwarz, warmes Gold, minimale Kontraste.
+                    Dadurch wirken Logos und Art-Pieces zeitlos, stark und hochwertig –
+                    egal ob digital oder auf Leinwand.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <h3>Von der Idee zum Logo.</h3>
+                <p>
+                    Jede Arbeit startet mit einer Story: Wer bist du? Wie soll sich deine Marke anfühlen?
+                    Daraus entsteht ein visuelles Emblem, das sich wie ein echtes Familienwappen anfühlt –
+                    nur moderner.
+                </p>
+            </article>
         </div>
+    </section>
 
-        <div class="handmade">Handgemachte Art-Pieces & digitale Logos – designed mit ❤️ in der Schweiz.</div>
-    </div>
-
-    <img src="emblem.png" class="hero-image">
-</section>
-
-<section id="about" class="about-section">
-    <h2>Über Spectrum Bild</h2>
-    <p class="subline">Eine Mischung aus königlichem Wappen, Street-Attitude und modernem Luxus.</p>
-
-    <div class="info-box">
-        <h3>Luxus, aber mit einem Augenzwinkern.</h3>
-        <p>Spectrum Bild spielt bewusst mit Symbolen von Reichtum: Kronen, Löwen, Initialen – kombiniert mit einer kleinen, reichen Maus.</p>
-    </div>
-
-    <div class="info-box">
-        <h3>Gold & Schwarz als Signature Look.</h3>
-        <p>Die Farbwelt ist klar: tiefes Schwarz, warmes Gold. Zeitlos, stark und hochwertig – digital oder auf Leinwand.</p>
-    </div>
-
-    <div class="info-box">
-        <h3>Von der Idee zum Logo.</h3>
-        <p>Jedes Piece startet mit deiner Story – daraus entsteht ein modernes, eigenes Emblem.</p>
-    </div>
-</section>
-
-<section id="process" class="process-section">
-    <h2>So entsteht dein Logo oder Art-Piece</h2>
-    <p class="subline">Klarer Prozess, viel Gefühl – damit das Ergebnis wirklich zu dir passt.</p>
-
-    <div class="steps">
-        <div class="step">
-            <h4>SCHRITT 1</h4>
-            <h3>Vibe & Vision</h3>
-            <p>Du erzählst, wer du bist und wie deine Marke aussehen soll. Einfach & ehrlich.</p>
-        </div>
-
-        <div class="step">
-            <h4>SCHRITT 2</h4>
-            <h3>Design & Skizzen</h3>
-            <p>Erste Ideen & Entwürfe entstehen. Formen, Gold, Symbolik – alles kombiniert.</p>
-        </div>
-
-        <div class="step">
-            <h4>SCHRITT 3</h4>
-            <h3>Final & Übergabe</h3>
-            <p>Du erhältst dein fertiges Logo oder Art-Piece digital oder als Leinwand.</p>
-        </div>
-    </div>
-</section>
-
-<section id="contact" class="contact-section">
-    <h2>Kontakt & Anfragen</h2>
-    <p>Du möchtest ein Logo, ein Emblem oder ein Art-Piece im Spectrum-Bild-Style?</p>
-
-    <div class="contact-box">
-        <p>
-            Schreib einfach eine Mail mit ein paar Infos zu dir und deiner Idee.<br>
-            <strong>sophia.zuechner@gmail.com</strong>
+    <!-- SIGNATURE PIECE / FEATURE -->
+    <section id="signature" class="section">
+        <h2>Signature Piece</h2>
+        <p class="section-subtitle">
+            Ein einzigartiges Art-Piece, das Luxus mit Humor verbindet.
         </p>
-        <p class="note">Auf Wunsch sind auch Auftragsarbeiten, limitierte Editions & personalisierte Embleme möglich.</p>
-    </div>
-</section>
 
-<footer>
-    © 2025 Spectrum Bild • Luxury Branding & Art • Alle Rechte vorbehalten.
-</footer>
+        <div class="signature-highlight">
+            <div class="signature-text">
+                <h3>The Little Rich Mouse</h3>
+                <p>
+                    Eine kleine Maus mit grosser Attitude – Gold, Pink und royales Lettering treffen auf
+                    Street-Art-Vibes. Das Piece ist Statement, Emblem und Gesprächsstarter in einem.
+                </p>
+                <a href="detail-little-rich-mous.html" class="btn btn-primary">
+                    Mehr Details &amp; Bieten →
+                </a>
+            </div>
+        </div>
+    </section>
 
+    <!-- ABLAUF -->
+    <section id="process" class="section">
+        <h2>So entsteht dein Logo oder Art-Piece</h2>
+        <p class="section-subtitle">
+            Klarer Prozess, viel Gefühl – damit das Ergebnis wirklich zu dir passt.
+        </p>
+
+        <div class="process-cards">
+            <article class="process-card">
+                <div class="process-step">SCHRITT 1</div>
+                <h3>Vibe &amp; Vision</h3>
+                <p>
+                    Du erzählst, wer du bist, was du liebst und wie sich deine Marke anfühlen soll.
+                    Kein komplizierter Fragebogen – einfach ein ehrliches Gespräch.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <div class="process-step">SCHRITT 2</div>
+                <h3>Design &amp; Skizzen</h3>
+                <p>
+                    Auf Basis deiner Story entstehen erste Ideen, Symbole und Layouts.
+                    Gold, Typografie und Formen werden so kombiniert, dass dein ganz eigenes Emblem entsteht.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <div class="process-step">SCHRITT 3</div>
+                <h3>Final &amp; Übergabe</h3>
+                <p>
+                    Du erhältst dein finales Logo oder Art-Piece – bereit für Social Media, Druck
+                    oder als physische Leinwand.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="contact" class="section section-contact">
+        <h2>Kontakt &amp; Anfragen</h2>
+        <p class="section-subtitle">
+            Du möchtest ein Logo, ein Emblem oder ein eigenes Art-Piece im Spectrum-Bild-Style?
+        </p>
+
+        <div class="contact-box">
+            <p>
+                Schreib einfach eine Mail mit ein paar Infos zu dir und deiner Idee.
+                Du musst noch nichts Perfektes formulieren – wir finden den Rest gemeinsam heraus.
+            </p>
+
+            <p class="contact-mail">
+                📧 <a href="mailto:sophia.zuechner@gmail.com">sophia.zuechner@gmail.com</a>
+            </p>
+
+            <p class="contact-note">
+                Auf Wunsch sind auch Auftragsarbeiten, limitierte Editions und personalisierte Embleme möglich.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        © 2025 Spectrum Bild · Luxury Branding &amp; Art · Alle Rechte vorbehalten.
+    </footer>
 </body>
 </html>

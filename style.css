@@ -160,3 +160,46 @@ footer {
     color: #a99772;
     font-size: 14px;
 }
+/* ------------------- */
+/*   GALERIE SECTION   */
+/* ------------------- */
+
+.gallery {
+    padding: 100px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gallery h1 {
+    font-size: 60px;
+    margin-bottom: 60px;
+    color: #e7d3a3;
+}
+
+.gallery-card {
+    display: flex;
+    align-items: center;
+    background: #f7eed8;
+    border-radius: 22px;
+    padding: 40px;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.gallery-img {
+    width: 330px;
+    height: auto;
+    border-radius: 12px;
+    transform: rotate(-90deg);
+}
+
+.gallery-text {
+    text-align: left;
+}
+
+.price {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 20px;
+}

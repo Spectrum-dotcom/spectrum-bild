@@ -242,5 +242,11 @@ body {
 .button-secondary {
     padding: 14px 30px;
     border-radius: 12px;
-    font-size: 18px;
+/* Fester Navy-Hintergrund für den ganzen Bereich */
+.section-dark {
+    background: #0a0d1a !important; /* Tiefes Navy-Blau */
+    padding: 120px 0;
+    color: #f0d7a3;
+}
+font-size: 18px;
     text-decoration: no

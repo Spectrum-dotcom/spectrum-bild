@@ -1,41 +1,119 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie – Spectrum Bild</title>
-    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            background: #0a1a33;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .navbar {
+            background: #000;
+            padding: 20px;
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            color: gold;
+        }
+
+        .gallery-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            color: black;
+            border-radius: 18px;
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .card-img {
+            width: 260px;
+            height: auto;
+            border-radius: 14px;
+            object-fit: cover;
+        }
+
+        .rotate90 {
+            transform: rotate(-90deg);
+            height: 260px;
+        }
+
+        .card-info {
+            flex: 1;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0a1a33;
+        }
+
+        .card-meta {
+            margin-top: 6px;
+            font-size: 15px;
+            color: #444;
+        }
+
+        .card-price {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #0a1a33;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 10px 18px;
+            background: #0a1a33;
+            color: white;
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+        }
+
+    </style>
 </head>
+<body>
 
-<body class="gallery-body">
+    <div class="navbar">GALLERIE</div>
 
-<header>
-    <div class="logo">Spectrum Bild</div>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="galerie.html" class="active">Galerie</a>
-    </nav>
-</header>
+    <div class="gallery-container">
 
-<h1 class="gallery-title">Galerie</h1>
+        <!-- BILD 1 – The Little Rich Mous -->
+        <div class="card">
+            <img class="card-img rotate90" src="the-little-rich-mous.jpg" alt="Little Rich Mous">
 
-<div class="gallery-container">
+            <div class="card-info">
+                <div class="card-title">The Little Rich Mous</div>
+                <div class="card-meta">Acryl auf Leinwand · 69,5 × 49 × 1,5 cm</div>
+                <div class="card-price">Startpreis: 1500 CHF</div>
 
-    <!-- Bild-Karte 1 -->
-    <div class="card">
-        <img class="card-img" src="the-little-rich-mous.jpg" alt="The Little Rich Mous" />
-        
-        <div class="card-info">
-            <h2>The Little Rich Mous</h2>
-            <p>Acryl auf Leinwand – 69,5 × 49 × 1,5 cm</p>
-            <p><strong>Startpreis:</strong> 1500 CHF</p>
-            <p><strong>Aktuelles Gebot:</strong> 1500 CHF</p>
-
-            <a href="little-rich-mous.html" class="btn">Details & Bieten ansehen</a>
+                <a href="little-rich-mous.html" class="btn">Details & Bieten ansehen</a>
+            </div>
         </div>
-    </div>
 
-</div>
+    </div>
 
 </body>
 </html>
